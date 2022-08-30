@@ -1,0 +1,52 @@
+﻿body
+{
+    background-color: var(--bg_h);
+}
+
+#main_content
+{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    min-width: 90%;
+    min-height: 90%;
+}
+
+h1
+{
+    font-family: JetBrains Mono;
+}
+
+p
+{
+    font-family: JetBrains Mono;
+    color: white;
+}
+
+#name_container
+{
+    margin: 0;
+    display: ruby;
+}
+
+#name_cursor
+{
+    margin: 0;
+}
+
+#name
+{
+    margin: 0;
+}
+
+.flashing
+{
+    animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes flash
+{
+    0% {opacity: 1.0}
+    50% {opacity: 0.0}
+    100% {opacity: 1.0}
+}
