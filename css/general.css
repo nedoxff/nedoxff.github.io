@@ -3,3 +3,79 @@
     font-family: "JetBrains Mono";
     src: url(../src/font/JetBrainsMono[wght].ttf);
 }
+
+body
+{
+    background-color: var(--bg_h);
+}
+
+#main-content
+{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    min-width: 90%;
+    min-height: 90%;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+}
+
+h1
+{
+    font-family: JetBrains Mono;
+}
+
+#name-container
+{
+    margin: 0;
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#name-cursor
+{
+    margin: 0;
+}
+
+#name
+{
+    margin: 0;
+}
+
+.flashing
+{
+    animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes flash
+{
+    0% {opacity: 1.0}
+    50% {opacity: 0.0}
+    100% {opacity: 1.0}
+}
+
+.text-button
+{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: "JetBrains Mono";
+    color: white;
+    margin-left: 10px;
+    transition: color 0.25s ease-in-out;
+}
+
+.text-button:hover
+{
+    color: var(--yellow);
+}
+
+#list
+{
+    display: inline-block;
+    grid-column: 1;
+    grid-row: 2;
+}
