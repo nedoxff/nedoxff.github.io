@@ -4,7 +4,7 @@
     cursor: revert;
 }
 
-#home-button
+#home-button, #overview-button
 {
     display: block;
 }

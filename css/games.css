@@ -1,0 +1,27 @@
+﻿#overview-container
+{
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#games-button
+{
+    color: var(--yellow);
+    cursor: revert;
+}
+
+#home-button, #overview-button
+{
+    display: block;
+}
+
+#games-container
+{
+    display: inline-block;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 5px;
+}

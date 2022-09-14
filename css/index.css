@@ -1,6 +1,10 @@
 ﻿#home-button
 {
-    display: block;
     color: var(--yellow);
     cursor: revert;
+}
+
+#home-button, #overview-button
+{
+    display: block;
 }
