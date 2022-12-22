@@ -5,10 +5,16 @@
 }
 
 @media (max-width: 500px) {
-    #content-div
+    #content-wrapper
     {
-        width: 100% !important;
+        width: 100vw !important;
     }
+}
+
+#content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
 }
 
 #toggle-theme-button
