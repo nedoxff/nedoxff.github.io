@@ -42,6 +42,7 @@ $(() => {
         if((chapter > chaptersLength.length - 1 || chapter < 0) || (page > chaptersLength[chapter] - 1 || page < 0))
             window.location.href = "https://nedoxff.github.io";
         $("#page").attr("src", `../assets/img/anger/c${chapter}/${page}.png`);
+        $("#chapter-id").text(chapter.toString());
     }
 });
 
