@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="../js/anger.js"></script>
+    
+    <title>anger.</title>
+    
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+        }
+        
+        #chapter-id {
+            margin: 0;
+            mix-blend-mode: difference;
+            color: white;
+            font-size: 5rem;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            user-select: none;
+            transform: translate(-50%, -50%);
+            font-family: arial;
+        }
+        
+        #page
+        {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img id="page"/>
+    <h1 id="chapter-id">0</h1>
+</body>
+</html>

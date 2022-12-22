@@ -3,6 +3,7 @@
     createCard("helloween.png", "also made as a discord profile picture, although for halloween");
     createCard("EEEEEEEEAAAAAAAAA.png", "trying out different styles");
     createCard("NEWYEAR_HOUSE.png", "some interior drawings for a christmas project i am working on");
+    $(".card-container").append(`<a href="/projects/anger"><img style="margin-top: 15px" class="card-img" src="assets/img/anger_thumb.png"></a>`);
 });
 
 const getCard = (filename, description) => `<div class="card">

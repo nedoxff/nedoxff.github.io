@@ -2,3 +2,8 @@
     font-family: fira;
     src: url("../assets/fonts/FiraCode.woff2");
 }
+
+@font-face {
+    font-family: arial;
+    src: url("../assets/fonts/Arial.ttf");
+}
