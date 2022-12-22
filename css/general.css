@@ -1,5 +1,7 @@
 ﻿body {
     background-color: var(--bg);
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 500px) {
@@ -33,7 +35,7 @@
 
 #content-div
 {
-    width: 50vw;
+    width: 100%;
     padding: 15px;
 }
 
@@ -45,7 +47,7 @@
     color: var(--yellow);
 }
 
-#nickname-text, .section-button > h3 {
+#nickname-text, .section-button > h3, .selected-section {
     margin: 0;
 }
 
