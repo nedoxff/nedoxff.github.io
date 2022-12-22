@@ -1,7 +1,7 @@
 ﻿let chapter, page;
 
 $(() => {
-    $("body").click(e => {
+    $(window).click(e => {
        const width = $(window).width();
        const event = e.originalEvent;
        const href = window.location.href;
