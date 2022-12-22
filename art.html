@@ -6,18 +6,54 @@
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="js/theme.js"></script>
-
+    <script src="js/art.js"></script>
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link id="gruvbox-theme-link" rel="stylesheet">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/general.css">
-
+    
     <title>nedoxff's website</title>
-
+    
     <style>
-        #introduction {
-            font-family: fira,sans-serif;
+        #main-text, .card-filename, .card-description {
             color: var(--fg);
+        }
+        
+        .card {
+            background-color: var(--bg_s);
+            min-width: 100%;
+            height: fit-content;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+        
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .card-img-link:hover {
+            cursor: zoom-in;
+        }
+        
+        .card-img-link {
+            min-width: 25%;
+            max-width: 25%;
+        }
+        
+        .card-img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        
+        .card-filename, .card-description {
+            margin: 0 0 0 15px;
+        }
+        
+        .card-filename {
+            overflow-wrap: anywhere;
         }
     </style>
 </head>
@@ -25,16 +61,19 @@
 <button id="toggle-theme-button"><i class="material-icons" id="toggle-theme-icon">brightness_low</i></button>
 <div style="display: flex; justify-content: center">
     <div id="content-div">
-
+        
         <div style="min-width: 0; flex-wrap: wrap; display: flex; flex-direction: row; align-items: baseline;">
-            <h1 id="nickname-text">nedoxff</h1>
+            <a href="/" style="text-decoration: none"><h1 id="nickname-text">nedoxff</h1></a>
             <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>info</h3></a>
             <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>code</h3></a>
-            <a class="section-button" href="/art"><h3>art</h3></a>
+            <h3 class="selected-section">art</h3>
             <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>other</h3></a>
         </div>
         <hr style="height: 1px; background-color: var(--fg); color: var(--fg);">
-        <h3 id="introduction">hi! i am nedo <i>(or nedoxff)</i>, a programmer living in belarus.<br> i like to code, sometimes draw, but generally im a <sub>dumbass.</sub><br>nice to meet you!</h3>
+        <h3 id="main-text">i draw sometimes! i wouldn't call myself an <i>artist</i>, but still.<br>here's some of my most recent sketches/stuff:</h3>
+        <div class="card-container">
+            
+        </div>
     </div>
 </div>
 </body>

@@ -1,0 +1,62 @@
+﻿body {
+    background-color: var(--bg);
+}
+
+@media (max-width: 500px) {
+    #content-div
+    {
+        width: 100% !important;
+    }
+}
+
+#toggle-theme-button
+{
+    border-radius: 50px;
+    background: var(--fg);
+    border: none;
+    height: 2.5rem;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+#toggle-theme-button:hover {
+    cursor: pointer;
+}
+
+#toggle-theme-icon
+{
+    color: var(--bg_h);
+    vertical-align: middle;
+    font-size: 2rem;
+}
+
+#content-div
+{
+    width: 50vw;
+    padding: 15px;
+}
+
+#nickname-text, .section-button, .selected-section, .card-filename, .card-description, #main-text {
+    font-family: fira,sans-serif;
+}
+
+#nickname-text, .section-button {
+    color: var(--yellow);
+}
+
+#nickname-text, .section-button > h3 {
+    margin: 0;
+}
+
+.selected-section {
+    color: var(--fg);
+    margin-left: 15px;
+    user-select: none;
+}
+
+.section-button {
+    margin-left: 15px;
+    text-decoration-color: var(--yellow);
+    text-decoration-thickness: 2px;
+}
