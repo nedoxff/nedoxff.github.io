@@ -31,9 +31,9 @@ $(() => {
     {
         const href = window.location.href;
         if(href.includes("?"))
-            window.location.href = href.substring(href.indexOf("?"), null) + "?c=0&p=0";
+            window.location.replace(href.substring(href.indexOf("?"), null) + "?c=0&p=0");
         else
-            window.location.href = href + "?c=0&p=0";
+            window.location.replace(href + "?c=0&p=0");
     }
     else
     {
