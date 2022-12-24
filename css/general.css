@@ -63,6 +63,10 @@
     user-select: none;
 }
 
+.selected-section > h3 {
+    margin: 0;
+}
+
 .section-button {
     margin-left: 15px;
     text-decoration-color: var(--yellow);
