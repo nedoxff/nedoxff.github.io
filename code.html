@@ -6,7 +6,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="js/theme.js"></script>
-    <script src="js/art.js"></script>
+    <script src="js/code.js"></script>
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link id="gruvbox-theme-link" rel="stylesheet">
@@ -16,7 +16,7 @@
     <title>nedoxff's website</title>
     
     <style>
-        #main-text, .card-filename, .card-description {
+        #main-text, .card-title, .card-description {
             color: var(--fg);
         }
         
@@ -48,11 +48,11 @@
             border-radius: 5px;
         }
         
-        .card-filename, .card-description {
-            margin: 0 0 0 15px;
+        .card-title, .card-description, .card-data-loading {
+            margin: 0;
         }
         
-        .card-filename {
+        .card-title {
             overflow-wrap: anywhere;
         }
     </style>
@@ -65,14 +65,16 @@
         <div style="min-width: 0; flex-wrap: wrap; display: flex; flex-direction: row; align-items: baseline;">
             <a href="/" style="text-decoration: none"><h1 id="nickname-text">nedoxff</h1></a>
             <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>info</h3></a>
-            <a class="section-button" href="/code"><h3>code</h3></a>
-            <h3 class="selected-section">art</h3>
+            <a class="selected-section"><h3>code</h3></a>
+            <a class="section-button" href="/art"><h3>art</h3></a>
             <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>other</h3></a>
         </div>
         <hr style="height: 1px; background-color: var(--fg); color: var(--fg);">
-        <h3 id="main-text">i draw sometimes! i wouldn't call myself an <i>artist</i>, but still.<br>here's some of my most recent sketches/stuff:</h3>
+        <h3 id="main-text">my main language is C#, but i also use js, python and c++ in day to day life.<br>here are some of my projects:</h3>
         <div class="card-container">
+            
         </div>
+        <h3 class="headline-text">or just check <a style="color: var(--fg)" href="https://github.com/nedoxff">my github!</a></h3>
     </div>
 </div>
 </body>

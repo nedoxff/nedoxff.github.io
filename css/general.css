@@ -68,3 +68,8 @@
     text-decoration-color: var(--yellow);
     text-decoration-thickness: 2px;
 }
+
+.headline-text {
+    font-family: fira,sans-serif;
+    color: var(--fg);
+}
