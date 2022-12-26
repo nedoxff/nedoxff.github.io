@@ -6,7 +6,7 @@
     $(".card-container").append(`<div style="display: flex; flex-direction: row; align-content: baseline">
             <a href="/projects/anger"><img style="margin-top: 15px" class="card-img"
                                            src="assets/img/anger_thumb.png"></a>
-                <button id="anger-settings-button" style="margin-top: 15px; margin-left: 5px;" onclick="window.location.href = window.location.href.substring(window.location.href.indexOf('art'), null) + 'projects/anger_settings';"><i class="material-icons">settings</i></button>
+                <button id="anger-settings-button" style="margin-top: 15px; margin-left: 5px;" onclick="window.location.href = window.location.href.substring(window.location.href.indexOf('art'), null) + 'projects/anger_settings';"><i class="material-icons" style="color: var(--bg_h); vertical-align: middle;">settings</i></button>
             </div>`);
 });
 
