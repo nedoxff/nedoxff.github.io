@@ -58,14 +58,13 @@ $(() => {
         
         pageImage.attr("src", `../assets/img/anger/c${chapter}/${page}.png`);
         pageImage.on('load', () => {
-            chapterId.text(chapter.toString());
-            console.log(localStorage.getItem("angerIndicatorType"));
             switch(localStorage.getItem("angerIndicatorType")) {
                 case "small":
+                    chapterId.text(chapter.toString());
                     chapterId.addClass("smaller-id");
                     break;
                 case "large":
-                    console.log(pageImage.width);
+                    chapterId.text(chapter.toString());
                     chapterId.css("width", pageImage.width());
                     chapterId.css("height", pageImage.height());
                     textFit(document.getElementById("chapter-id"), {maxFontSize: 100000, alignHoriz: true, alignVert: true});
