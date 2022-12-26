@@ -67,7 +67,7 @@ $(() => {
                     chapterId.text(chapter.toString());
                     chapterId.css("width", pageImage.width());
                     chapterId.css("height", pageImage.height());
-                    textFit(document.getElementById("chapter-id"), {maxFontSize: 100000, alignHoriz: true, alignVert: true});
+                    textFit(document.getElementById("chapter-id"), {maxFontSize: 100000, alignHoriz: true, alignVertWithFlexbox: true});
                     break;
             } 
         });

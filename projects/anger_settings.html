@@ -73,16 +73,8 @@
         .type-box-text {
             mix-blend-mode: difference;
             font-family: Arial;
-            /*text-align: center;
-            align-self: center;*/
-            /*position: absolute;
-            left: 50%;
-            top: 50%;*/
             color: white;
-            /*transform: translate(-50%, -50%);*/
             margin: 0;
-            /*width: 200px;*/
-            /*height: 100%;*/
         }
         
         #fit-text {
@@ -119,7 +111,7 @@
     
     <script>
         $(() => {
-            textFit(document.getElementById("fit-text"), {maxFontSize: 1000, alignHoriz: true, alignVert: true});
+            textFit(document.getElementById("fit-text"), {maxFontSize: 1000, alignHoriz: true, alignVertWithFlexbox: true});
         });
         
         const save = (type) => {
