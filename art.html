@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/art.js"></script>
-    
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link id="gruvbox-theme-link" rel="stylesheet">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/general.css">
-    
+
     <title>nedoxff's website</title>
-    
+
     <style>
         #main-text, .card-filename, .card-description {
             color: var(--fg);
         }
-        
+
         .card {
             background-color: var(--bg_s);
             min-width: 100%;
@@ -27,33 +27,46 @@
             border-radius: 15px;
             margin-top: 15px;
         }
-        
+
         .card-content {
             padding: 15px;
             display: flex;
             flex-direction: row;
         }
-        
+
         .card-img-link:hover {
             cursor: zoom-in;
         }
-        
+
         .card-img-link {
             min-width: 25%;
             max-width: 25%;
         }
-        
+
         .card-img {
             max-width: 100%;
             border-radius: 5px;
         }
-        
+
         .card-filename, .card-description {
             margin: 0 0 0 15px;
         }
-        
+
         .card-filename {
             overflow-wrap: anywhere;
+        }
+
+        #anger-settings-button
+        {
+            border-radius: 5px;
+            background: var(--fg);
+            border: none;
+            height: 32px;
+            width: 32px;
+        }
+
+        #anger-settings-button:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -61,7 +74,7 @@
 <button id="toggle-theme-button"><i class="material-icons" id="toggle-theme-icon">brightness_low</i></button>
 <div id="content-wrapper">
     <div id="content-div">
-        
+
         <div style="min-width: 0; flex-wrap: wrap; display: flex; flex-direction: row; align-items: baseline;">
             <a href="/" style="text-decoration: none"><h1 id="nickname-text">nedoxff</h1></a>
             <a class="section-button" href="/info"><h3>info</h3></a>
@@ -70,7 +83,8 @@
             <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>other</h3></a>
         </div>
         <hr style="height: 1px; background-color: var(--fg); color: var(--fg);">
-        <h3 id="main-text">i draw sometimes! i wouldn't call myself an <i>artist</i>, but still.<br>here's some of my most recent sketches/stuff:</h3>
+        <h3 id="main-text">i draw sometimes! i wouldn't call myself an <i>artist</i>, but still.<br>here's some of my
+            most recent sketches/stuff:</h3>
         <div class="card-container">
         </div>
     </div>
