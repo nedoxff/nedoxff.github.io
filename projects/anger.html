@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="../css/fonts.css">
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="../js/lib/textFit.js"></script>
     <script src="../js/anger.js"></script>
     
     <title>anger.</title>
@@ -21,13 +22,16 @@
             margin: 0;
             mix-blend-mode: difference;
             color: white;
+            user-select: none;
+            font-family: arial;
+        }
+        
+        .smaller-id {
             font-size: 5rem;
             position: fixed;
             left: 50%;
             top: 50%;
-            user-select: none;
             transform: translate(-50%, -50%);
-            font-family: arial;
         }
         
         #page
@@ -41,6 +45,8 @@
 </head>
 <body>
     <img id="page"/>
-    <h1 id="chapter-id"></h1>
+    <div id="chapter-id">
+        
+    </div>
 </body>
 </html>

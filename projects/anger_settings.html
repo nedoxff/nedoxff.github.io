@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="../js/lib/textFit.js"></script>
+    <!--<script src="../js/anger.js"></script>-->
+
+    <title>settings</title>
+
+    <style>
+        @media (max-width: 500px) {
+            #type-container {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            
+            #content {
+                height: max-content !important;
+                overflow: scroll !important;
+            }
+        }
+        
+        body {
+            margin: 0;
+            background: black;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        #select {
+            font-family: fira;
+            text-align: center;
+        }
+
+        #content {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #type-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        
+        .type-box:hover {
+            cursor: pointer;
+        }
+        
+        .type-box {
+            margin-left: 15px;
+        }
+        
+        .type-box-page {
+            border: 5px solid white;
+            border-radius: 5px;
+            position: relative;
+            width: 200px;
+            height: 300px;
+        }
+        
+        .type-box-text {
+            mix-blend-mode: difference;
+            font-family: Arial;
+            /*text-align: center;
+            align-self: center;*/
+            /*position: absolute;
+            left: 50%;
+            top: 50%;*/
+            color: white;
+            /*transform: translate(-50%, -50%);*/
+            margin: 0;
+            /*width: 200px;*/
+            /*height: 100%;*/
+        }
+        
+        #fit-text {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            mix-blend-mode: difference;
+            font-family: Arial;
+            color: white;
+            user-select: none;
+        }
+        
+        .explanation {
+            font-family: fira;
+            color: white;
+            word-wrap: anywhere;
+            max-width: 200px;
+        }
+        
+        #smaller-id {
+            user-select: none;
+            font-family: Arial;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            mix-blend-mode: difference;
+            font-size: 3rem;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+    </style>
+    
+    <script>
+        $(() => {
+            textFit(document.getElementById("fit-text"), {maxFontSize: 1000, alignHoriz: true, alignVert: true});
+        });
+        
+        const save = (type) => {
+            localStorage.setItem("angerIndicatorType", type);
+            const href = window.location.href;
+            window.location.replace(href.substring(href.indexOf("anger_settings"), null) + "anger");
+        };
+    </script>
+</head>
+<body>
+<div id="content">
+    <h3 id="select">please choose how the chapter number should be displayed:</h3>
+    <div id="type-container">
+        <div class="type-box" style="margin-left: 0;" onclick="save('large')">
+            <div class="type-box-page">
+                <img src="../../assets/img/anger/c0/0.png" width="200" height="300">
+                <div id="fit-text">
+                    0
+                </div>
+            </div>
+            <p class="explanation">big indicator; it creates cool effects but can be distractive</p>
+        </div>
+
+        <div class="type-box" onclick="save('small')">
+            <div class="type-box-page">
+                <img src="../../assets/img/anger/c0/0.png" width="200" height="300">
+                <p id="smaller-id">0</p>
+            </div>
+            <p class="explanation">smaller, more readable, although not as pretty</p>
+        </div>
+
+        <div class="type-box" onclick="save('none')">
+            <div class="type-box-page">
+                <img src="../../assets/img/anger/c0/0.png" width="200" height="300">
+            </div>
+            <p class="explanation">no chapter indicator</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -11,7 +11,7 @@
 
 const setTheme = (t) => {
     const link = $("#gruvbox-theme-link");
-    let source = link.attr("href");
+    let source;
     source = t === "light" ? "css/gruvbox_light.css": "css/gruvbox.css";
     link.attr("href", source);  
 };
