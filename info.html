@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link id="gruvbox-theme-link" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/general.css">
+
+    <title>nedoxff's website</title>
+
+    <style>
+        #main-text, .card-title, .card-description {
+            color: var(--fg);
+        }
+
+        #social-medias-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            padding: 10px;
+            border-radius: 50px;
+            background-color: orange;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .card {
+            margin-left: 15px;
+        }
+
+        .social-media-link {
+            text-decoration: none;
+        }
+
+        .social-media-username {
+            margin: 0 0 0 10px;
+            color: white;
+            font-family: fira;
+        }
+    </style>
+</head>
+<body>
+<button id="toggle-theme-button"><i class="material-icons" id="toggle-theme-icon">brightness_low</i></button>
+<div id="content-wrapper">
+    <div id="content-div">
+
+        <div style="min-width: 0; flex-wrap: wrap; display: flex; flex-direction: row; align-items: baseline;">
+            <a href="/" style="text-decoration: none"><h1 id="nickname-text">nedoxff</h1></a>
+            <h3 class="selected-section">info</h3>
+            <a class="section-button" href="/code"><h3>code</h3></a>
+            <a class="section-button" href="/art"><h3>art</h3></a>
+            <a class="section-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h3>other</h3></a>
+        </div>
+        <hr style="height: 1px; background-color: var(--fg); color: var(--fg);">
+        <h3 id="main-text">you can find me here:</h3>
+        <div id="social-medias-container">
+            <a href="https://reddit.com/u/nedoxff" class="social-media-link">
+                <div class="card" style="margin-left: 0; background-color: rgba(255,69,0,255)">
+                    <img class="social-media-image" src="assets/img/social_medias/reddit.png" width="32">
+                    <h3 class="social-media-username">u/nedoxff</h3>
+                </div>
+            </a>
+            <a href="https://github.com/nedoxff" class="social-media-link">
+                <div class="card" style="background-color: rgba(36,41,47,255)">
+                    <img class="social-media-image" src="assets/img/social_medias/github.png" width="32">
+                    <h3 class="social-media-username">nedoxff</h3>
+                </div>
+            </a>
+            <div class="card" style="background-color: rgba(88,101,242,255)">
+                <img class="social-media-image" src="assets/img/social_medias/discord.png" width="32">
+                <h3 class="social-media-username">nedoxff#7576</h3>
+            </div>
+        </div>
+        <h3 class="headline-text"><i>inactive social medias are not shown.</i></h3>
+    </div>
+</div>
+</body>
+</html>
