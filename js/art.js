@@ -3,6 +3,7 @@
     createCard("helloween.png", "also made as a discord profile picture, although for halloween");
     createCard("EEEEEEEEAAAAAAAAA.png", "trying out different styles");
     createCard("NEWYEAR_HOUSE.png", "some interior drawings for a christmas project i am working on");
+    createCard("catboy_barista.png", "main character of a manga i really like. his name is hachi 🥺🥺🥺");
     $(".card-container").append(`<div style="display: flex; flex-direction: row; align-content: baseline">
             <a href="/projects/anger"><img style="margin-top: 15px" class="card-img"
                                            src="assets/img/anger_thumb.png"></a>
