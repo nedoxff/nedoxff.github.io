@@ -1,4 +1,5 @@
 ﻿$(() => {
+    createCard("UwurandomSharp", "aaaaaaaaa >///< uwu >////< aww shronkus,,n then the scrunkly the widdle the tie.. ittle like scrunge.. boinky tienpsy adornale a *purrs* afgahjlkjhjkafjhglkgjdkajdjegflfgjkfkafglkfg;algh");
     createCard("ScratchScript", "a programming language that compiles to scratch (dont ask why)")
     createCard("WAL", "a programming language intended for creating <a style='color: var(--fg)' href='https://www.youtube.com/watch?v=5BZLz21ZS_Y'>windows error</a> videos");
     createCard("nedoxff.github.io", "this website! :)")
