@@ -16,11 +16,11 @@
 		<div class="pr-5"><WavyLine /></div>
 		<div class="flex flex-col p-5">
 			<div transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut }}>
-				<HomeButton />
+				<HomeButton font="bitter" />
 			</div>
 			<p
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
-				class="text-2xl md:text-4xl font-light mt-5"
+				class="text-2xl md:text-4xl font-light font-bitter mt-5"
 			>
 				will write this later
 			</p>

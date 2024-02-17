@@ -6,7 +6,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+				bitter: ['Bitter'],
+				mono: ['JetBrains Mono']
 			},
 			transitionTimingFunction: {
 				'in-out-quad': 'cubic-bezier( 0.455,  0.030,  0.515,  0.955 )'
