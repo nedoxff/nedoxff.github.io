@@ -7,7 +7,9 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <h1
-	class="text-7xl text-dark dark:text-light font-medium font-{font} h-min w-min group {redirect
+	class="text-7xl {font == 'mono'
+		? 'tracking-tighter'
+		: ''} text-dark dark:text-light font-medium font-{font} h-min w-min group {redirect
 		? 'cursor-pointer'
 		: ''}"
 	on:click={() => {

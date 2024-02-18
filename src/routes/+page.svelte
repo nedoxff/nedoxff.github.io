@@ -41,7 +41,7 @@
 				hello! i'm nedo (or nedoxff if you like unpronounceable nicknames). i like to create new
 				things, whether it's code-related or something artistic.<br />you can view more information
 				about me and my stuff by clicking on the categories at the top of the page.<br /><br />
-				the code for this website in available on <CustomLink
+				the code for this website is available on <CustomLink
 					link="https://github.com/nedoxff/nedoxff.github.io"
 					text="github"
 				/> and is made with <CustomLink link="https://kit.svelte.dev" text="sveltekit" /> and <CustomLink

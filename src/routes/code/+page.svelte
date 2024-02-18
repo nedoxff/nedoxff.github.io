@@ -25,7 +25,7 @@
 			</div>
 			<p
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
-				class="text-2xl md:text-4xl font-light font-mono mt-5 text-dark dark:text-light"
+				class="text-2xl md:text-4xl tracking-tight font-light font-mono mt-5 text-dark dark:text-light"
 			>
 				will write this later
 			</p>

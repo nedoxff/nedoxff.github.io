@@ -23,7 +23,9 @@
 		ctx.beginPath();
 		ctx.wavy(
 			horizontal ? { x: 0, y: 20 } : { x: 20, y: 0 },
-			horizontal ? { x: window.screen.width, y: 20 } : { x: 20, y: window.screen.height },
+			horizontal
+				? { x: window.screen.width, y: 20 }
+				: { x: 20, y: Math.max(window.innerHeight, window.screen.height) },
 			25,
 			5,
 			2,
@@ -54,7 +56,7 @@
 
 	function resizeCanvas() {
 		horizontal = window.innerWidth <= 768;
-		canvas.height = horizontal ? 30 : window.innerHeight;
+		canvas.height = horizontal ? 30 : Math.max(window.innerHeight, window.screen.height);
 		canvas.width = horizontal ? window.innerWidth : 30;
 	}
 </script>
