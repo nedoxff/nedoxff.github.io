@@ -7,13 +7,15 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <h1
-	class="text-7xl pt-5 font-medium font-{font} h-min w-min group {redirect ? 'cursor-pointer' : ''}"
+	class="text-7xl text-dark dark:text-light font-medium font-{font} h-min w-min group {redirect
+		? 'cursor-pointer'
+		: ''}"
 	on:click={() => {
 		if (redirect) customRedirect('/');
 	}}
 >
 	nedoxff
 	<span
-		class="block max-w-0 group-hover:max-w-full transition-all ease-in-out-quad duration-500 h-1 bg-black"
+		class="block max-w-0 group-hover:max-w-full transition-all ease-in-out-quad duration-500 h-1 bg-dark dark:bg-light"
 	></span>
 </h1>

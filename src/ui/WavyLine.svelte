@@ -19,7 +19,7 @@
 
 		ctx.lineCap = 'round';
 		ctx.lineWidth = 10;
-		ctx.strokeStyle = '#000000';
+		ctx.strokeStyle = document.documentElement.classList.contains('dark') ? '#FFFFFF' : '#101010';
 		ctx.beginPath();
 		ctx.wavy(
 			horizontal ? { x: 0, y: 20 } : { x: 20, y: 0 },
@@ -60,4 +60,4 @@
 </script>
 
 <svelte:window on:resize={resizeCanvas} />
-<canvas bind:this={canvas}></canvas>
+<canvas bind:this={canvas} class="fixed"></canvas>

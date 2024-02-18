@@ -4,8 +4,10 @@
 	import { MAIN_ANIMATION_DURATION, show } from '$lib';
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
-	import StylizedLink from '../ui/StylizedLink.svelte';
+	import CategoryButton from '../ui/CategoryButton.svelte';
 	import HomeButton from '../ui/HomeButton.svelte';
+	import ThemeSwitcher from '../ui/ThemeSwitcher.svelte';
+	import CustomLink from '../ui/UnderlinedLink.svelte';
 
 	onMount(() => {
 		show.set(true);
@@ -15,24 +17,37 @@
 {#if $show}
 	<div class="flex flex-col md:flex-row">
 		<div class="md:pr-5"><WavyLine /></div>
-		<div class="flex flex-col p-5">
-			<div transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut }}>
+		<div class="flex flex-col p-5 mt-10 md:mt-5 md:ml-10 min-h-max items-stretch">
+			<div
+				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut }}
+				class="flex flex-row align-baseline"
+			>
 				<HomeButton redirect={false} />
+				<ThemeSwitcher />
 			</div>
 			<div
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
 				class="flex flex-row flex-wrap mt-1"
 			>
-				<StylizedLink text="about" destination="/about"></StylizedLink>
-				<StylizedLink text="art" destination="/art"></StylizedLink>
-				<StylizedLink text="code" destination="/code"></StylizedLink>
-				<StylizedLink text="contact" destination="/contact"></StylizedLink>
+				<CategoryButton text="about" destination="/about"></CategoryButton>
+				<CategoryButton text="art" destination="/art"></CategoryButton>
+				<CategoryButton text="code" destination="/code"></CategoryButton>
+				<CategoryButton text="contact" destination="/contact"></CategoryButton>
 			</div>
 			<p
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 500 }}
-				class="text-2xl md:text-4xl font-light mt-10"
+				class="text-2xl md:text-4xl font-light mt-10 text-dark dark:text-light"
 			>
-				hello! i decided to redesign the website a bit.
+				hello! i'm nedo (or nedoxff if you like unpronounceable nicknames). i like to create new
+				things, whether it's code-related or something artistic.<br />you can view more information
+				about me and my stuff by clicking on the categories at the top of the page.<br /><br />
+				the code for this website in available on <CustomLink
+					link="https://github.com/nedoxff/nedoxff.github.io"
+					text="github"
+				/> and is made with <CustomLink link="https://kit.svelte.dev" text="sveltekit" /> and <CustomLink
+					link="https://tailwindcss.com"
+					text="tailwindcss"
+				/>.
 			</p>
 		</div>
 	</div>

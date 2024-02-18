@@ -12,6 +12,10 @@ export default {
 			},
 			transitionTimingFunction: {
 				'in-out-quad': 'cubic-bezier( 0.455,  0.030,  0.515,  0.955 )'
+			},
+			colors: {
+				dark: '#101010',
+				light: '#FFFFFF'
 			}
 		}
 	},
