@@ -17,7 +17,7 @@
 {#if $show}
 	<div class="flex flex-col md:flex-row">
 		<div class="md:pr-5"><WavyLine /></div>
-		<div class="flex flex-col p-5 mt-10 md:mt-5 md:ml-10 min-h-max items-stretch">
+		<div class="mt-10 flex min-h-max flex-col items-stretch p-5 md:ml-10 md:mt-5">
 			<div
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut }}
 				class="flex flex-row align-baseline"
@@ -27,7 +27,7 @@
 			</div>
 			<div
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
-				class="flex flex-row flex-wrap mt-1"
+				class="mt-1 flex flex-row flex-wrap"
 			>
 				<CategoryButton text="about" destination="/about"></CategoryButton>
 				<CategoryButton text="art" destination="/art"></CategoryButton>
@@ -36,7 +36,7 @@
 			</div>
 			<p
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 500 }}
-				class="text-2xl md:text-4xl font-light mt-10 text-dark dark:text-light"
+				class="mt-10 text-2xl font-light text-dark dark:text-light md:text-4xl"
 			>
 				hello! i'm nedo (or nedoxff if you like unpronounceable nicknames). i like to create new
 				things, whether it's code-related or something artistic.<br />you can view more information

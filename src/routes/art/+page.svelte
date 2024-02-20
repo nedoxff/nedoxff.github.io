@@ -15,7 +15,7 @@
 {#if $show}
 	<div class="flex flex-col md:flex-row">
 		<div class="pr-5"><WavyLine /></div>
-		<div class="flex flex-col p-5 mt-10 md:mt-5 md:ml-10 min-h-max items-stretch">
+		<div class="mt-10 flex min-h-max flex-col items-stretch p-5 md:ml-10 md:mt-5">
 			<div
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut }}
 				class="flex flex-row align-baseline"
@@ -25,7 +25,7 @@
 			</div>
 			<p
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
-				class="text-2xl md:text-4xl font-light font-bitter mt-5 text-dark dark:text-light"
+				class="mt-5 font-bitter text-2xl font-light text-dark dark:text-light md:text-4xl"
 			>
 				will write this later
 			</p>

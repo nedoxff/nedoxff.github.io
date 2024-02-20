@@ -6,7 +6,7 @@
 <a href={link}
 	><u>{text}</u>
 	<img
-		class="dark:invert inline-block -ml-2 align-baseline"
+		class="-ml-2 inline-block align-baseline dark:invert"
 		src="/icons/link.svg"
 		alt="link icon"
 	/></a

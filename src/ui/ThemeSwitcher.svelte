@@ -15,14 +15,14 @@
 </script>
 
 <button
-	class="ml-3 self-center flex justify-center items-center transition-all ease-in-out-quad duration-[500] dark:bg-dark hover:dark:bg-light dark:border-light border-dark border-2 rounded-full h-min p-2"
+	class="group ml-3 flex h-min items-center justify-center self-center rounded-full border-2 border-dark bg-light p-2 transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:bg-dark hover:dark:bg-light"
 	on:click={onClicked}
 >
 	<img
 		bind:this={icon}
 		src="/icons/{theme}_mode.svg"
 		width="36"
-		class="transition-all ease-in-out-quad duration-[500] dark:invert hover:dark:invert-0"
+		class="transition-all duration-[500] ease-in-out-quad group-hover:invert dark:invert group-hover:dark:invert-0"
 		alt="theme icon"
 	/>
 </button>

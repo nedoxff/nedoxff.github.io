@@ -7,9 +7,9 @@
 
 <button
 	on:click={() => customRedirect(destination)}
-	class="flex justify-center items-center rounded-full transition-all ease-in-out-quad duration-[500] cursor-pointer hover:bg-dark dark:hover:bg-light border-dark dark:border-light border-2"
+	class="flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 >
-	<h2 class="text-4xl text-dark dark:text-light hover:text-light dark:hover:text-dark py-3 px-5">
+	<h2 class="px-5 py-3 text-4xl text-dark hover:text-light dark:text-light dark:hover:text-dark">
 		{text}
 	</h2>
 </button>

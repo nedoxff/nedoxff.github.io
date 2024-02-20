@@ -62,4 +62,4 @@
 </script>
 
 <svelte:window on:resize={resizeCanvas} />
-<canvas bind:this={canvas} class="fixed"></canvas>
+<canvas bind:this={canvas} class="md:fixed"></canvas>

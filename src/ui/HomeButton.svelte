@@ -9,7 +9,7 @@
 <h1
 	class="text-7xl {font == 'mono'
 		? 'tracking-tighter'
-		: ''} text-dark dark:text-light font-medium font-{font} h-min w-min group {redirect
+		: ''} font-medium text-dark dark:text-light font-{font} group h-min w-min {redirect
 		? 'cursor-pointer'
 		: ''}"
 	on:click={() => {
@@ -18,6 +18,6 @@
 >
 	nedoxff
 	<span
-		class="block max-w-0 group-hover:max-w-full transition-all ease-in-out-quad duration-500 h-1 bg-dark dark:bg-light"
+		class="block h-1 max-w-0 bg-dark transition-all duration-500 ease-in-out-quad group-hover:max-w-full dark:bg-light"
 	></span>
 </h1>

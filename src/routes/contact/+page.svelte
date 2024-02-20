@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
 	import ThemeSwitcher from '../../ui/ThemeSwitcher.svelte';
+	import SocialMediaBadge from '../../ui/SocialMediaBadge.svelte';
 
 	onMount(() => {
 		show.set(true);
@@ -15,7 +16,7 @@
 {#if $show}
 	<div class="flex flex-col md:flex-row">
 		<div class="pr-5"><WavyLine /></div>
-		<div class="flex flex-col p-5 mt-10 md:mt-5 md:ml-10 min-h-max items-stretch">
+		<div class="mt-10 flex min-h-max flex-col items-stretch p-5 md:ml-10 md:mt-5">
 			<div
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut }}
 				class="flex flex-row align-baseline"
@@ -25,10 +26,28 @@
 			</div>
 			<p
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
-				class="text-2xl md:text-4xl font-light mt-5 text-dark dark:text-light"
+				class="mt-5 text-2xl font-light text-dark dark:text-light md:text-4xl"
 			>
-				will write this later
+				i exist on the following social medias:
 			</p>
+			<div
+				class="mt-5 flex flex-row flex-wrap"
+				transition:fly={{
+					y: 15,
+					duration: MAIN_ANIMATION_DURATION,
+					easing: quadInOut,
+					delay: 500
+				}}
+			>
+				<SocialMediaBadge baseColor="#5865F2" icon="discord" text="@nedoxff" />
+				<SocialMediaBadge
+					baseColor="#171516"
+					icon="github"
+					text="nedoxff"
+					link="https://github.com/nedoxff"
+					invert={true}
+				></SocialMediaBadge>
+			</div>
 		</div>
 	</div>
 {/if}
