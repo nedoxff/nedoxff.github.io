@@ -2,46 +2,53 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.png" />
-
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@200..700&display=swap">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@200..700&display=swap">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<script>
 			localStorage.theme === 'dark' ||
 			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 				? document.documentElement.classList.add('dark')
 				: document.documentElement.classList.remove('dark');
-			
-			const titles = ["website", "dumpster fire", "mess", "web page", "page", "undefined"];
-    		const index = (Math.random() * titles.length) << 0;
-    		document.title = `nedo's ${titles[index]}`;
+
+			const titles = ['website', 'dumpster fire', 'mess', 'web page', 'page', 'undefined'];
+			const index = (Math.random() * titles.length) << 0;
+			document.title = `nedo's ${titles[index]}`;
 		</script>
 
+		<link rel="icon" href="/favicon.png" />
+
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Bitter:wght@200..700&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@200..700&display=swap"
+		/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.KvxLLIZq.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/entry.1qgpvKlA.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.F_5KhMjs.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index.tPRXrOXO.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.U6nSc_9O.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index.QxZnvzc5.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.ZmWOWCJ4.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.i1N7HLOq.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.JQ_H5JGF.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.NMyrZ7mc.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.GvzKXJVE.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.0rSnL02N.js">
 	</head>
 	<body data-sveltekit-preload-data="hover" class="bg-light dark:bg-dark">
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_jm82f = {
+					__sveltekit_1c62j8c = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.KvxLLIZq.js"),
-						import("/_app/immutable/entry/app.U6nSc_9O.js")
+						import("/_app/immutable/entry/start.ZmWOWCJ4.js"),
+						import("/_app/immutable/entry/app.GvzKXJVE.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
