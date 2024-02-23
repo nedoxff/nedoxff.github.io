@@ -6,7 +6,6 @@
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
 	import ThemeSwitcher from '../../ui/ThemeSwitcher.svelte';
-	import SocialMediaBadge from '../../ui/SocialMediaBadge.svelte';
 
 	onMount(() => {
 		show.set(true);
@@ -31,7 +30,7 @@
 				i exist on the following social medias:
 			</p>
 			<div
-				class="mt-5 flex flex-row flex-wrap"
+				class="mt-5 flex flex-col flex-wrap md:flex-row"
 				transition:fly={{
 					y: 15,
 					duration: MAIN_ANIMATION_DURATION,
@@ -39,15 +38,37 @@
 					delay: 500
 				}}
 			>
-				<SocialMediaBadge baseColor="#5865F2" icon="discord" text="@nedoxff" />
-				<SocialMediaBadge
-					baseColor="#171516"
-					icon="github"
-					text="nedoxff"
-					link="https://github.com/nedoxff"
-					invert={true}
-				></SocialMediaBadge>
+				<a
+					href={null}
+					class="inline-flex h-20 w-auto max-w-20 items-center overflow-hidden rounded-full bg-[#5865F2] transition-all duration-500 ease-in-out-quad hover:max-w-full active:pointer-events-none md:active:pointer-events-auto"
+				>
+					<span class="ml-3 flex h-16 min-w-14 max-w-14 items-center"
+						><img class="" src="/social/discord.svg" alt="discord icon" /></span
+					>
+					<a href={null} class="active:pointer-events-auto md:active:pointer-events-none"
+						><span class="ml-3 mr-4 text-4xl font-bold text-light">@nedoxff</span></a
+					>
+				</a>
+				<a
+					href="https://github.com/nedoxff"
+					class="inline-flex h-20 w-auto max-w-20 items-center overflow-hidden rounded-full bg-[#171516] transition-[max-width] duration-500 ease-in-out-quad hover:max-w-full active:pointer-events-none dark:bg-[#E8EAE9] md:active:pointer-events-auto"
+				>
+					<span class="ml-3 flex h-16 min-w-14 max-w-14 items-center dark:invert"
+						><img class="invert" src="/social/github.svg" alt="github icon" /></span
+					>
+					<a
+						href="https://github.com/nedoxff"
+						class="active:pointer-events-auto md:active:pointer-events-none"
+						><span class="ml-3 mr-4 text-4xl font-bold text-light dark:text-dark">nedoxff</span></a
+					>
+				</a>
 			</div>
+			<p
+				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 750 }}
+				class="mt-5 text-xl font-light text-dark dark:text-light md:text-3xl"
+			>
+				i'm not usually slow to respond, but please don't expect me to answer immediately.
+			</p>
 		</div>
 	</div>
 {/if}
