@@ -7,6 +7,8 @@
 	import { quadInOut } from 'svelte/easing';
 	import ThemeSwitcher from '../../ui/ThemeSwitcher.svelte';
 
+	let socialBadgeContainer: HTMLDivElement;
+
 	onMount(() => {
 		show.set(true);
 		window
@@ -16,9 +18,7 @@
 	});
 
 	const setExpanded = (expand: boolean) => {
-		const links = Array.from(document.getElementById('social-badge-container')!.children).map(
-			(v) => v as HTMLLinkElement
-		);
+		const links = Array.from(socialBadgeContainer.children).map((v) => v as HTMLLinkElement);
 		for (const link of links) link.style.maxWidth = expand ? '100%' : '';
 	};
 </script>
@@ -42,7 +42,7 @@
 			</p>
 			<div
 				class="mt-5 flex flex-col flex-wrap md:flex-row"
-				id="social-badge-container"
+				bind:this={socialBadgeContainer}
 				transition:fly={{
 					y: 15,
 					duration: MAIN_ANIMATION_DURATION,
@@ -54,19 +54,19 @@
 					href={null}
 					class="inline-flex h-20 w-auto max-w-20 items-center overflow-hidden rounded-full bg-[#5865F2] transition-all duration-700 ease-in-out-quad hover:max-w-full"
 				>
-					<span class="ml-3 flex h-16 min-w-14 max-w-14 items-center"
+					<span class="ml-4 flex h-16 min-w-12 max-w-12 items-center"
 						><img class="" src="/social/discord.svg" alt="discord icon" /></span
 					>
-					<span class="ml-3 mr-4 text-4xl font-bold text-light">@nedoxff</span>
+					<span class="ml-4 mr-4 text-4xl font-bold text-light">@nedoxff</span>
 				</a>
 				<a
 					href="https://github.com/nedoxff"
 					class="inline-flex h-20 w-auto max-w-20 items-center overflow-hidden rounded-full bg-[#171516] transition-[max-width] duration-700 ease-in-out-quad hover:max-w-full dark:bg-[#E8EAE9]"
 				>
-					<span class="ml-3 flex h-16 min-w-14 max-w-14 items-center dark:invert"
+					<span class="ml-4 flex h-16 min-w-12 max-w-12 items-center dark:invert"
 						><img class="invert" src="/social/github.svg" alt="github icon" /></span
 					>
-					<span class="ml-3 mr-4 text-4xl font-bold text-light dark:text-dark">nedoxff</span>
+					<span class="ml-4 mr-4 text-4xl font-bold text-light dark:text-dark">nedoxff</span>
 				</a>
 			</div>
 			<p
