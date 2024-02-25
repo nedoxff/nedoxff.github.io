@@ -41,7 +41,7 @@
 				i exist on the following social medias:
 			</p>
 			<div
-				class="mt-5 flex flex-col flex-wrap md:flex-row"
+				class="mt-5 flex flex-col flex-wrap gap-1 md:flex-row"
 				bind:this={socialBadgeContainer}
 				transition:fly={{
 					y: 15,

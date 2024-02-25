@@ -34,7 +34,7 @@
 				nevertheless, you can find some examples of my work below:
 			</p>
 			<div
-				class="mt-5 flex flex-col items-baseline xl:flex-row"
+				class="mt-5 flex flex-col items-baseline gap-2 xl:flex-row"
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 500 }}
 			>
 				<ExpandableCategory name="digital art">

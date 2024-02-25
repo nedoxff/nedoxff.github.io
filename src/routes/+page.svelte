@@ -27,7 +27,7 @@
 			</div>
 			<div
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
-				class="mt-1 flex flex-row flex-wrap"
+				class="mt-1 flex flex-row flex-wrap gap-1"
 			>
 				<CategoryButton text="about" destination="/about"></CategoryButton>
 				<CategoryButton text="art" destination="/art"></CategoryButton>
