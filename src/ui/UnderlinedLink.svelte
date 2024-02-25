@@ -3,7 +3,7 @@
 	export let link: string;
 </script>
 
-<a href={link}
+<a href={link} target="_blank"
 	><u>{text}</u>
 	<img
 		class="-ml-2 inline-block align-baseline dark:invert"
