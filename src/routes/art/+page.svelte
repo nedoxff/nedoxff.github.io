@@ -13,7 +13,26 @@
 	import * as Drawer from '$lib/components/ui/drawer';
 	import { Masonry } from '@fristys/masonry';
 
-	let digitalArtContainer: HTMLDivElement;
+	export const enableMasonry: import('svelte/action').Action<HTMLElement> = (node: HTMLElement) => {
+		const masonry = createMasonry(node);
+
+		return {
+			destroy() {
+				masonry.dispose();
+			}
+		};
+	};
+
+	export const createMasonry = (node: HTMLElement) => {
+		return new Masonry(node, {
+			gutter: 0.5,
+			gutterUnit: 'rem',
+			columnBreakpoints: { 768: 2, 1024: 3, 1536: 4 },
+			initOnImageLoad: true,
+			useContainerWidth: true,
+			trackItemSizeChanges: true
+		});
+	};
 
 	onMount(() => {
 		show.set(true);
@@ -55,20 +74,6 @@
 					</h1>
 					<Drawer.Root>
 						<Drawer.Trigger
-							on:click={() => {
-								setTimeout(
-									() =>
-										new Masonry(digitalArtContainer, {
-											gutter: 0.5,
-											gutterUnit: 'rem',
-											columnBreakpoints: { 768: 2, 1024: 3, 1536: 4 },
-											initOnImageLoad: true,
-											useContainerWidth: true,
-											trackItemSizeChanges: true
-										}),
-									100
-								);
-							}}
 							class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 						>
 							<h2
@@ -78,8 +83,7 @@
 							</h2>
 						</Drawer.Trigger>
 						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
-							<Drawer.Header class="mx-3 flex flex-row items-center justify-between">
-								<p class="font-inter text-3xl font-bold">digital artwork</p>
+							<Drawer.Header class="mx-3 flex flex-row items-center justify-end">
 								<Drawer.Close
 									><button
 										class="group ml-3 flex h-min items-center justify-center self-center rounded-full border-2 border-dark bg-light p-2 transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:bg-dark hover:dark:bg-light"
@@ -93,23 +97,25 @@
 									</button>
 								</Drawer.Close>
 							</Drawer.Header>
-							<div
-								class="mx-6 my-3 overflow-scroll [&>*]:w-[33%] [&>*]:rounded-xl"
-								bind:this={digitalArtContainer}
-							>
+							<div class="mx-6 my-3 overflow-y-scroll" use:enableMasonry>
+								<img src="art-digital/please.jpg" alt="" />
 								<img src="art-digital/AGRETSUKAAAAAAAAA.png" alt="" />
 								<img src="art-digital/back.png" alt="" />
 								<img src="art-digital/cat.png" alt="" />
+								<img src="art-digital/griff.jpg" alt="" />
 								<img src="art-digital/catny2023.png" alt="" />
 								<img src="art-digital/crunchmas.png" alt="" />
 								<img src="art-digital/doggo2.png" alt="" />
 								<img src="art-digital/dogpfp.png" alt="" />
 								<img src="art-digital/haida.png" alt="" />
 								<img src="art-digital/identity.png" alt="" />
+								<img src="art-digital/sona.jpg" alt="" />
 								<img src="art-digital/TAXI.png" alt="" />
 								<img src="art-digital/testline.png" alt="" />
 								<img src="art-digital/unnick_c.png" alt="" />
 								<img src="art-digital/MEEEEEEEEEEHEHE2.png" alt="" />
+								<img src="art-digital/looking.jpg" alt="" />
+								<img src="art-digital/wild.jpg" alt="" />
 							</div>
 						</Drawer.Content>
 					</Drawer.Root>
@@ -120,15 +126,40 @@
 						device. still, such devices are sometimes inaccessible. i mainly draw with a mechanical
 						pencil and that's it.
 					</h1>
-					<button
-						class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
-					>
-						<h2
-							class="px-5 py-3 text-2xl text-dark hover:text-light dark:text-light dark:hover:text-dark"
+					<Drawer.Root>
+						<Drawer.Trigger
+							class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 						>
-							view work
-						</h2>
-					</button>
+							<h2
+								class="px-5 py-3 text-2xl text-dark hover:text-light dark:text-light dark:hover:text-dark"
+							>
+								view work
+							</h2>
+						</Drawer.Trigger>
+						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
+							<Drawer.Header class="mx-3 flex flex-row items-center justify-end">
+								<Drawer.Close
+									><button
+										class="group ml-3 flex h-min items-center justify-center self-center rounded-full border-2 border-dark bg-light p-2 transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:bg-dark hover:dark:bg-light"
+									>
+										<img
+											src="/icons/close.svg"
+											width="36"
+											class="transition-all duration-[500] ease-in-out-quad group-hover:invert dark:invert group-hover:dark:invert-0"
+											alt="close icon"
+										/>
+									</button>
+								</Drawer.Close>
+							</Drawer.Header>
+							<div class="mx-6 my-3 overflow-y-scroll" use:enableMasonry>
+								<img src="art-traditional/1.jpg" alt="" />
+								<img src="art-traditional/2.jpg" alt="" />
+								<img src="art-traditional/3.jpg" alt="" />
+								<img src="art-traditional/4.jpg" alt="" />
+								<img src="art-traditional/5.jpg" alt="" />
+							</div>
+						</Drawer.Content>
+					</Drawer.Root>
 				</ExpandableCategory>
 				<ExpandableCategory name="visual novels" autoOpenDelay={650}>
 					<h1 class="text-2xl text-dark dark:text-light">
