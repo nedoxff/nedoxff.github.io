@@ -42,7 +42,7 @@
 		"@fristys/masonry": "^1.1.7",
 		"@types/animejs": "^3.1.12",
 		"animejs": "^3.2.2",
-		"bits-ui": "^0.18.2",
+		"bits-ui": "^0.18.4",
 		"clsx": "^2.1.0",
 		"gh-pages": "^6.1.1",
 		"lucide-svelte": "^0.341.0",

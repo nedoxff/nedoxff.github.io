@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MAIN_ANIMATION_DURATION, customRedirect, show } from '$lib';
+	import { MAIN_ANIMATION_DURATION, customRedirect, show, showingOverlayedDialog } from '$lib';
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
@@ -12,6 +12,7 @@
 
 	import * as Drawer from '$lib/components/ui/drawer';
 	import { Masonry } from '@fristys/masonry';
+	import ViewableImage from '../../ui/ViewableImage.svelte';
 
 	export const enableMasonry: import('svelte/action').Action<HTMLElement> = (node: HTMLElement) => {
 		const masonry = createMasonry(node);
@@ -72,7 +73,7 @@
 							link="https://ibispaint.com/?lang=en-US"
 						/> on mobile.
 					</h1>
-					<Drawer.Root>
+					<Drawer.Root dismissible={!($showingOverlayedDialog)}>
 						<Drawer.Trigger
 							class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 						>
@@ -83,7 +84,11 @@
 							</h2>
 						</Drawer.Trigger>
 						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
-							<Drawer.Header class="mx-3 flex flex-row items-center justify-end">
+							<Drawer.Header class="mx-1.5 flex flex-row items-center justify-between">
+								<div class="flex flex-col items-start">
+									<h1 class="text-3xl font-bold text-light">digital artwork</h1>
+									<p class="text-xl text-start">artworks shown are not sorted.<br>click on an image to view it in full size!</p>
+								</div>
 								<Drawer.Close
 									><button
 										class="group ml-3 flex h-min items-center justify-center self-center rounded-full border-2 border-dark bg-light p-2 transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:bg-dark hover:dark:bg-light"
@@ -97,25 +102,28 @@
 									</button>
 								</Drawer.Close>
 							</Drawer.Header>
-							<div class="mx-6 my-3 overflow-y-scroll" use:enableMasonry>
-								<img src="art-digital/please.jpg" alt="" />
-								<img src="art-digital/AGRETSUKAAAAAAAAA.png" alt="" />
-								<img src="art-digital/back.png" alt="" />
-								<img src="art-digital/cat.png" alt="" />
-								<img src="art-digital/griff.jpg" alt="" />
-								<img src="art-digital/catny2023.png" alt="" />
-								<img src="art-digital/crunchmas.png" alt="" />
-								<img src="art-digital/doggo2.png" alt="" />
-								<img src="art-digital/dogpfp.png" alt="" />
-								<img src="art-digital/haida.png" alt="" />
-								<img src="art-digital/identity.png" alt="" />
-								<img src="art-digital/sona.jpg" alt="" />
-								<img src="art-digital/TAXI.png" alt="" />
-								<img src="art-digital/testline.png" alt="" />
-								<img src="art-digital/unnick_c.png" alt="" />
-								<img src="art-digital/MEEEEEEEEEEHEHE2.png" alt="" />
-								<img src="art-digital/looking.jpg" alt="" />
-								<img src="art-digital/wild.jpg" alt="" />
+							<div
+								class="mx-3 my-3 overflow-y-scroll [&>*]:w-1/3 [&>*]:rounded-xl"
+								use:enableMasonry
+							>
+								<ViewableImage src="art-digital/please.jpg"/>
+								<ViewableImage src="art-digital/AGRETSUKAAAAAAAAA.png"/>
+								<ViewableImage src="art-digital/back.png"/>
+								<ViewableImage src="art-digital/cat.png"/>
+								<ViewableImage src="art-digital/griff.jpg"/>
+								<ViewableImage src="art-digital/catny2023.png"/>
+								<ViewableImage src="art-digital/crunchmas.png"/>
+								<ViewableImage src="art-digital/doggo2.png"/>
+								<ViewableImage src="art-digital/dogpfp.png"/>
+								<ViewableImage src="art-digital/haida.png"/>
+								<ViewableImage src="art-digital/identity.png"/>
+								<ViewableImage src="art-digital/sona.jpg"/>
+								<ViewableImage src="art-digital/TAXI.png"/>
+								<ViewableImage src="art-digital/testline.png"/>
+								<ViewableImage src="art-digital/unnick_c.png"/>
+								<ViewableImage src="art-digital/MEEEEEEEEEEHEHE2.png"/>
+								<ViewableImage src="art-digital/looking.jpg"/>
+								<ViewableImage src="art-digital/wild.jpg"/>
 							</div>
 						</Drawer.Content>
 					</Drawer.Root>
@@ -126,7 +134,7 @@
 						device. still, such devices are sometimes inaccessible. i mainly draw with a mechanical
 						pencil and that's it.
 					</h1>
-					<Drawer.Root>
+					<Drawer.Root dismissible={!($showingOverlayedDialog)}>
 						<Drawer.Trigger
 							class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 						>
@@ -137,7 +145,7 @@
 							</h2>
 						</Drawer.Trigger>
 						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
-							<Drawer.Header class="mx-3 flex flex-row items-center justify-end">
+							<Drawer.Header class="mx-1.5 flex flex-row items-center justify-between">
 								<Drawer.Close
 									><button
 										class="group ml-3 flex h-min items-center justify-center self-center rounded-full border-2 border-dark bg-light p-2 transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:bg-dark hover:dark:bg-light"
@@ -151,12 +159,12 @@
 									</button>
 								</Drawer.Close>
 							</Drawer.Header>
-							<div class="mx-6 my-3 overflow-y-scroll" use:enableMasonry>
-								<img src="art-traditional/1.jpg" alt="" />
-								<img src="art-traditional/2.jpg" alt="" />
-								<img src="art-traditional/3.jpg" alt="" />
-								<img src="art-traditional/4.jpg" alt="" />
-								<img src="art-traditional/5.jpg" alt="" />
+							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry>
+								<ViewableImage src="art-traditional/1.jpg"/>
+								<ViewableImage src="art-traditional/2.jpg"/>
+								<ViewableImage src="art-traditional/3.jpg"/>
+								<ViewableImage src="art-traditional/4.jpg"/>
+								<ViewableImage src="art-traditional/5.jpg"/>
 							</div>
 						</Drawer.Content>
 					</Drawer.Root>
