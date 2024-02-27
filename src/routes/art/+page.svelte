@@ -73,7 +73,7 @@
 							link="https://ibispaint.com/?lang=en-US"
 						/> on mobile.
 					</h1>
-					<Drawer.Root dismissible={!($showingOverlayedDialog)}>
+					<Drawer.Root dismissible={!$showingOverlayedDialog}>
 						<Drawer.Trigger
 							class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 						>
@@ -87,7 +87,9 @@
 							<Drawer.Header class="mx-1.5 flex flex-row items-center justify-between">
 								<div class="flex flex-col items-start">
 									<h1 class="text-3xl font-bold text-light">digital artwork</h1>
-									<p class="text-xl text-start">artworks shown are not sorted.<br>click on an image to view it in full size!</p>
+									<p class="text-start text-xl">
+										artworks shown are not sorted.<br />click on an image to view it in full size!
+									</p>
 								</div>
 								<Drawer.Close
 									><button
@@ -106,24 +108,24 @@
 								class="mx-3 my-3 overflow-y-scroll [&>*]:w-1/3 [&>*]:rounded-xl"
 								use:enableMasonry
 							>
-								<ViewableImage src="art-digital/please.jpg"/>
-								<ViewableImage src="art-digital/AGRETSUKAAAAAAAAA.png"/>
-								<ViewableImage src="art-digital/back.png"/>
-								<ViewableImage src="art-digital/cat.png"/>
-								<ViewableImage src="art-digital/griff.jpg"/>
-								<ViewableImage src="art-digital/catny2023.png"/>
-								<ViewableImage src="art-digital/crunchmas.png"/>
-								<ViewableImage src="art-digital/doggo2.png"/>
-								<ViewableImage src="art-digital/dogpfp.png"/>
-								<ViewableImage src="art-digital/haida.png"/>
-								<ViewableImage src="art-digital/identity.png"/>
-								<ViewableImage src="art-digital/sona.jpg"/>
-								<ViewableImage src="art-digital/TAXI.png"/>
-								<ViewableImage src="art-digital/testline.png"/>
-								<ViewableImage src="art-digital/unnick_c.png"/>
-								<ViewableImage src="art-digital/MEEEEEEEEEEHEHE2.png"/>
-								<ViewableImage src="art-digital/looking.jpg"/>
-								<ViewableImage src="art-digital/wild.jpg"/>
+								<ViewableImage src="art-digital/please.jpg" />
+								<ViewableImage src="art-digital/AGRETSUKAAAAAAAAA.png" />
+								<ViewableImage src="art-digital/back.png" />
+								<ViewableImage src="art-digital/cat.png" />
+								<ViewableImage src="art-digital/griff.jpg" />
+								<ViewableImage src="art-digital/catny2023.png" />
+								<ViewableImage src="art-digital/crunchmas.png" />
+								<ViewableImage src="art-digital/doggo2.png" />
+								<ViewableImage src="art-digital/dogpfp.png" />
+								<ViewableImage src="art-digital/haida.png" />
+								<ViewableImage src="art-digital/identity.png" />
+								<ViewableImage src="art-digital/sona.jpg" />
+								<ViewableImage src="art-digital/TAXI.png" />
+								<ViewableImage src="art-digital/testline.png" />
+								<ViewableImage src="art-digital/unnick_c.png" />
+								<ViewableImage src="art-digital/MEEEEEEEEEEHEHE2.png" />
+								<ViewableImage src="art-digital/looking.jpg" />
+								<ViewableImage src="art-digital/wild.jpg" />
 							</div>
 						</Drawer.Content>
 					</Drawer.Root>
@@ -134,7 +136,7 @@
 						device. still, such devices are sometimes inaccessible. i mainly draw with a mechanical
 						pencil and that's it.
 					</h1>
-					<Drawer.Root dismissible={!($showingOverlayedDialog)}>
+					<Drawer.Root dismissible={!$showingOverlayedDialog}>
 						<Drawer.Trigger
 							class="mt-1 flex cursor-pointer items-center justify-center rounded-full border-2 border-dark transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:hover:bg-light"
 						>
@@ -146,6 +148,12 @@
 						</Drawer.Trigger>
 						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
 							<Drawer.Header class="mx-1.5 flex flex-row items-center justify-between">
+								<div class="flex flex-col items-start">
+									<h1 class="text-3xl font-bold text-light">traditional artwork</h1>
+									<p class="text-start text-xl">
+										artworks shown are not sorted.<br />click on an image to view it in full size!
+									</p>
+								</div>
 								<Drawer.Close
 									><button
 										class="group ml-3 flex h-min items-center justify-center self-center rounded-full border-2 border-dark bg-light p-2 transition-all duration-[500] ease-in-out-quad hover:bg-dark dark:border-light dark:bg-dark hover:dark:bg-light"
@@ -160,11 +168,11 @@
 								</Drawer.Close>
 							</Drawer.Header>
 							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry>
-								<ViewableImage src="art-traditional/1.jpg"/>
-								<ViewableImage src="art-traditional/2.jpg"/>
-								<ViewableImage src="art-traditional/3.jpg"/>
-								<ViewableImage src="art-traditional/4.jpg"/>
-								<ViewableImage src="art-traditional/5.jpg"/>
+								<ViewableImage src="art-traditional/1.jpg" />
+								<ViewableImage src="art-traditional/2.jpg" />
+								<ViewableImage src="art-traditional/3.jpg" />
+								<ViewableImage src="art-traditional/4.jpg" />
+								<ViewableImage src="art-traditional/5.jpg" />
 							</div>
 						</Drawer.Content>
 					</Drawer.Root>
