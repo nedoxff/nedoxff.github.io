@@ -56,7 +56,7 @@
 				nevertheless, you can find some examples of my work below:
 			</p>
 			<div
-				class="mt-5 flex flex-col flex-wrap items-start gap-2 xl:flex-row"
+				class="z-10 mt-5 flex flex-col flex-wrap items-start gap-2 xl:flex-row"
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 500 }}
 			>
 				<ExpandableCategory name="digital art" autoOpenDelay={550}>
@@ -177,6 +177,17 @@
 					</h1>
 				</ExpandableCategory>
 			</div>
+			<img
+				transition:fly={{
+					y: -15,
+					duration: MAIN_ANIMATION_DURATION,
+					easing: quadInOut,
+					delay: 250
+				}}
+				src="general/doggo.gif"
+				class="-z-10 -mb-5 -mr-5 ml-auto w-60 dark:invert xl:fixed xl:bottom-0 xl:right-0 xl:mb-0 xl:mr-0"
+				alt="corner doggo"
+			/>
 		</div>
 	</div>
 {/if}
