@@ -16,6 +16,7 @@
 	});
 
 	const categoryMasonryProvider = (node: HTMLElement) => {
+		if (window.innerWidth <= 1024) return undefined;
 		return new Masonry(node, {
 			gutter: 0.5,
 			gutterUnit: 'rem',
@@ -81,14 +82,16 @@
 					</h1></ExpandableCategory
 				>
 				<ExpandableCategory name="desktop apps" alwaysOpened={true}
-					>my first desktop projects were made with WinForms and rarely WPF. nowadays i use either
-					AvaloniaUI/MAUI for C# and Flutter for other stuff.</ExpandableCategory
+					><h1 class="text-2xl text-dark dark:text-light">
+						my first desktop projects were made with WinForms and sometimes WPF. nowadays i use
+						either AvaloniaUI/MAUI for C# and Flutter when i'm tired of C#.
+					</h1></ExpandableCategory
 				>
 				<ExpandableCategory name="ui design" alwaysOpened={true}
 					><h1 class="text-2xl text-dark dark:text-light">
-						i started experimenting with ui design only recently, and i somewhat like the minimalist
-						look that some websites follow. this website and all GUI apps are my attempts at dipping
-						my toe into UI design.
+						i started experimenting with UI design only recently, and i somewhat like the minimalist
+						look that some websites follow. this website and all of the GUI apps are my attempts at
+						dipping my toes into UI design.
 					</h1></ExpandableCategory
 				>
 				<ExpandableCategory name="portfolio" alwaysOpened={true}
