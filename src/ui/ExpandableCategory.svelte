@@ -4,11 +4,14 @@
 
 	export let name: string;
 	export let autoOpenDelay: number = 0;
+	export let alwaysOpened: boolean = false;
+
 	let expandIcon: HTMLImageElement;
 	let open: boolean = false;
 
 	onMount(() => {
-		setTimeout(() => (open = autoOpenDelay != 0), autoOpenDelay);
+		if (alwaysOpened) open = true;
+		else setTimeout(() => (open = autoOpenDelay != 0), autoOpenDelay);
 	});
 
 	const toggleExpanded = () => {
@@ -18,6 +21,7 @@
 </script>
 
 <Collapsible.Root
+	disabled={alwaysOpened}
 	bind:open
 	class="w-full flex-1 rounded-3xl border-2 border-dark p-0.5 dark:border-light xl:basis-3/12"
 >
@@ -33,7 +37,7 @@
 			alt="expand icon"
 		/>
 	</Collapsible.Trigger>
-	<Collapsible.Content class="px-4 pb-2">
+	<Collapsible.Content class="px-4 pb-2" skipTransition={alwaysOpened}>
 		<slot />
 	</Collapsible.Content>
 </Collapsible.Root>

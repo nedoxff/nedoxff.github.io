@@ -28,9 +28,9 @@
 		<div class="relative">
 			<slot />
 			<DialogPrimitive.Close
-				class="absolute right-4 top-4 rounded-full border-2 p-2 opacity-70 mix-blend-difference  ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground dark:border-light"
+				class="absolute right-4 top-4 rounded-full border-2 border-white p-2 opacity-70 mix-blend-difference transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
 			>
-				<X class="h-4 w-4" />
+				<img src="/icons/close.svg" class="h-4 w-4 mix-blend-difference invert" alt="close icon" />
 				<span class="sr-only">Close</span>
 			</DialogPrimitive.Close>
 		</div>

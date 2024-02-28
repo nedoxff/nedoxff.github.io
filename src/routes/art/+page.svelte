@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { MAIN_ANIMATION_DURATION, customRedirect, show, showingOverlayedDialog } from '$lib';
+	import {
+		MAIN_ANIMATION_DURATION,
+		customRedirect,
+		enableMasonry,
+		show,
+		showingOverlayedDialog
+	} from '$lib';
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
@@ -14,17 +20,7 @@
 	import { Masonry } from '@fristys/masonry';
 	import ViewableImage from '../../ui/ViewableImage.svelte';
 
-	export const enableMasonry: import('svelte/action').Action<HTMLElement> = (node: HTMLElement) => {
-		const masonry = createMasonry(node);
-
-		return {
-			destroy() {
-				masonry.dispose();
-			}
-		};
-	};
-
-	export const createMasonry = (node: HTMLElement) => {
+	const imageMasonryProvider = (node: HTMLElement) => {
 		return new Masonry(node, {
 			gutter: 0.5,
 			gutterUnit: 'rem',
@@ -86,7 +82,7 @@
 						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
 							<Drawer.Header class="mx-1.5 flex flex-row items-center justify-between">
 								<div class="flex flex-col items-start">
-									<h1 class="text-3xl font-bold text-light">digital artwork</h1>
+									<h1 class="text-3xl font-bold">digital artwork</h1>
 									<p class="text-start text-xl">
 										artworks shown are not sorted.<br />click on an image to view it in full size!
 									</p>
@@ -104,10 +100,7 @@
 									</button>
 								</Drawer.Close>
 							</Drawer.Header>
-							<div
-								class="mx-3 my-3 overflow-y-scroll [&>*]:w-1/3 [&>*]:rounded-xl"
-								use:enableMasonry
-							>
+							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry={imageMasonryProvider}>
 								<ViewableImage src="art-digital/please.jpg" />
 								<ViewableImage src="art-digital/AGRETSUKAAAAAAAAA.png" />
 								<ViewableImage src="art-digital/back.png" />
@@ -149,7 +142,7 @@
 						<Drawer.Content class="h-[95%] border-dark" id="digital-art-container">
 							<Drawer.Header class="mx-1.5 flex flex-row items-center justify-between">
 								<div class="flex flex-col items-start">
-									<h1 class="text-3xl font-bold text-light">traditional artwork</h1>
+									<h1 class="text-3xl font-bold">traditional artwork</h1>
 									<p class="text-start text-xl">
 										artworks shown are not sorted.<br />click on an image to view it in full size!
 									</p>
@@ -167,7 +160,7 @@
 									</button>
 								</Drawer.Close>
 							</Drawer.Header>
-							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry>
+							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry={imageMasonryProvider}>
 								<ViewableImage src="art-traditional/1.jpg" />
 								<ViewableImage src="art-traditional/2.jpg" />
 								<ViewableImage src="art-traditional/3.jpg" />

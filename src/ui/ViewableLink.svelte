@@ -3,12 +3,17 @@
 	import * as Dialog from '$lib/components/ui/dialog';
 
 	export let src: string;
+	export let text: string;
+	let open: boolean;
 
-	const onOpenChange = (open: boolean) => showingOverlayedDialog.set(open);
+	const onOpenChange = (v: boolean) => {
+		showingOverlayedDialog.set(v);
+		open = v;
+	};
 </script>
 
-<Dialog.Root {onOpenChange}>
-	<Dialog.Trigger><img class="rounded-xl" {src} alt="" /></Dialog.Trigger>
+<a href={'#'} on:click={() => onOpenChange(true)}><u class="text-start">{text}</u></a>
+<Dialog.Root bind:open {onOpenChange}>
 	<Dialog.Content class="h-max w-max">
 		<img
 			{src}

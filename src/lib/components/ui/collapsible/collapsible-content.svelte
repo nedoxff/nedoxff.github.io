@@ -2,11 +2,10 @@
 	import { Collapsible as CollapsiblePrimitive } from 'bits-ui';
 	import { slide } from 'svelte/transition';
 
-	type $$Props = CollapsiblePrimitive.ContentProps;
-
-	export let transition: $$Props['transition'] = slide;
-	export let transitionConfig: $$Props['transitionConfig'] = {
-		duration: 300
+	export let skipTransition: boolean = false;
+	export let transition: CollapsiblePrimitive.ContentProps['transition'] = slide;
+	export let transitionConfig: CollapsiblePrimitive.ContentProps['transitionConfig'] = {
+		duration: skipTransition ? 0 : 300
 	};
 </script>
 
