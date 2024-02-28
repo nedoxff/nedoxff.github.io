@@ -33,6 +33,7 @@
 		<img
 			bind:this={expandIcon}
 			class="w-14 dark:invert"
+			style="opacity: {alwaysOpened ? 0 : 100}"
 			src="icons/expand_more.svg"
 			alt="expand icon"
 		/>

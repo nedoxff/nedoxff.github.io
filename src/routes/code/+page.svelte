@@ -48,7 +48,7 @@
 				i mainly make backends and design GUIs, but you can find more information about my projects below:
 			</p>
 			<div
-				class="mt-5"
+				class="mt-5 gap-2 lg:gap-0"
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 500 }}
 				use:enableMasonry={categoryMasonryProvider}
 			>
