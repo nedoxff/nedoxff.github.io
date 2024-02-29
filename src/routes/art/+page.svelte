@@ -8,7 +8,7 @@
 	} from '$lib';
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
 	import ThemeSwitcher from '../../ui/ThemeSwitcher.svelte';
 	import ExpandableCategory from '../../ui/ExpandableCategory.svelte';
@@ -101,6 +101,7 @@
 								</Drawer.Close>
 							</Drawer.Header>
 							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry={imageMasonryProvider}>
+								<ViewableImage src="art-digital/baffled.png" />
 								<ViewableImage src="art-digital/please.jpg" />
 								<ViewableImage src="art-digital/AGRETSUKAAAAAAAAA.png" />
 								<ViewableImage src="art-digital/back.png" />
@@ -178,12 +179,7 @@
 				</ExpandableCategory>
 			</div>
 			<img
-				transition:fly={{
-					y: -15,
-					duration: MAIN_ANIMATION_DURATION,
-					easing: quadInOut,
-					delay: 250
-				}}
+				transition:fade={{ easing: quadInOut, delay: 700, duration: 750 }}
 				src="general/doggo.gif"
 				class="-z-10 -mb-5 -mr-5 ml-auto w-60 dark:invert xl:fixed xl:bottom-0 xl:right-0 xl:mb-0 xl:mr-0"
 				alt="corner doggo"

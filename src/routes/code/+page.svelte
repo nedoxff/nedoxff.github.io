@@ -73,8 +73,8 @@
 							text="which is how the previous version of this website was made."
 							src="general/old-website.png"
 						/>
-					</h1></ExpandableCategory
-				>
+					</h1>
+				</ExpandableCategory>
 				<ExpandableCategory name="mobile apps" alwaysOpened={true}
 					><h1 class="text-2xl text-dark dark:text-light">
 						i made personal projects with Xamarin and a professional chat app with Flutter. Flutter
@@ -92,11 +92,33 @@
 						i started experimenting with UI design only recently, and i somewhat like the minimalist
 						look that some websites follow. this website and all of the GUI apps are my attempts at
 						dipping my toes into UI design.
+					</h1>
+				</ExpandableCategory>
+				<ExpandableCategory name="game development" alwaysOpened={true}
+					><h1 class="text-2xl text-dark dark:text-light">
+						i've had multiple attempts at making games, but all of them have fallen short because i
+						couldn't form a proper team to work on a game. nevertheless, i've contributed to at
+						least 2 games while being in the <UnderlinedLink
+							text="Titled Jam Team"
+							link="https://github.com/titled-jam-team"
+						/>.
+					</h1></ExpandableCategory
+				>
+				<ExpandableCategory name="bots" alwaysOpened={true}
+					><h1 class="text-2xl text-dark dark:text-light">
+						i made 10+ discord bots for widely different purposes (games, moderation, general utils)
+						and several telegram bots purely for learning purposes. i'm pretty good at making them!
 					</h1></ExpandableCategory
 				>
 				<ExpandableCategory name="portfolio" alwaysOpened={true}
 					><h1 class="text-2xl text-dark dark:text-light">not yet!</h1></ExpandableCategory
 				>
+				<ExpandableCategory name="language development" alwaysOpened={true}
+					><h1 class="text-2xl text-dark dark:text-light">
+						i like creating syntaxes for languages and actually trying to make them runnable.<br />
+						one of the languages, ScratchScript, i've rewritten 5 times.
+					</h1>
+				</ExpandableCategory>
 			</div>
 		</div>
 	</div>
