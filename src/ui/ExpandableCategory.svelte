@@ -29,7 +29,7 @@
 		class="flex w-full flex-row items-center justify-between"
 		on:click={() => toggleExpanded()}
 	>
-		<h1 class="px-4 text-4xl text-dark dark:text-light">{name}</h1>
+		<h1 class="px-4 text-left text-4xl text-dark dark:text-light">{name}</h1>
 		<img
 			bind:this={expandIcon}
 			class="w-14 dark:invert"
