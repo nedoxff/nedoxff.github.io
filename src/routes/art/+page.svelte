@@ -56,7 +56,7 @@
 				nevertheless, you can find some examples of my work below:
 			</p>
 			<div
-				class="z-10 mt-5 flex flex-col flex-wrap items-start gap-2 xl:flex-row"
+				class="z-10 mt-5 flex flex-wrap items-start gap-2 xl:flex-row [&>*]:min-w-[100%] xl:[&>*]:min-w-[calc(50%-4px)]"
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 500 }}
 			>
 				<ExpandableCategory name="digital art" autoOpenDelay={550}>
@@ -175,6 +175,12 @@
 					<h1 class="text-2xl text-dark dark:text-light">
 						this is a genre i've discovered recently and i enjoyed it quite a bunch. i've read about
 						4 VNs and wrote 1, which isn't public and is mostly a local joke.
+					</h1>
+				</ExpandableCategory>
+				<ExpandableCategory name="designs" autoOpenDelay={650}>
+					<h1 class="text-2xl text-dark dark:text-light">
+						i make designs (sometimes)! most of them were posters for school events, but sometimes i
+						have fun and transfer similar concepts into web design.
 					</h1>
 				</ExpandableCategory>
 			</div>

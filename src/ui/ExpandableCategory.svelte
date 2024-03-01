@@ -23,7 +23,7 @@
 <Collapsible.Root
 	disabled={alwaysOpened}
 	bind:open
-	class="w-full flex-1 rounded-3xl border-2 border-dark p-0.5 dark:border-light xl:basis-3/12"
+	class="rounded-3xl border-2 border-dark p-0.5 dark:border-light xl:basis-3/12"
 >
 	<Collapsible.Trigger
 		class="flex w-full flex-row items-center justify-between"
