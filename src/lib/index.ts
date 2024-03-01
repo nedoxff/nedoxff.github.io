@@ -26,3 +26,10 @@ export const enableMasonry: import('svelte/action').Action<
 		}
 	};
 };
+
+export const preloadImage = (src: string) =>
+	new Promise((resolve) => {
+		const image = new Image();
+		image.onload = resolve;
+		image.src = src;
+	});
