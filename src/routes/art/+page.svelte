@@ -53,7 +53,7 @@
 			>
 				i started drawing at a relatively late age, so my skills are very basic and i don't do any
 				professional creative work.<br />
-				nevertheless, you can find some examples of my work below:
+				i don't participate in any fandom per se, but you'll quickly find out that i'm a furry.
 			</p>
 			<div
 				class="z-10 mt-5 flex flex-wrap items-start gap-2 xl:flex-row [&>*]:min-w-[100%] xl:[&>*]:min-w-[calc(50%-4px)]"

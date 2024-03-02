@@ -6,10 +6,33 @@
 	import { onMount } from 'svelte';
 	import { quadInOut } from 'svelte/easing';
 	import ThemeSwitcher from '../../ui/ThemeSwitcher.svelte';
+	import UnderlinedLink from '../../ui/UnderlinedLink.svelte';
 
 	onMount(() => {
 		show.set(true);
 	});
+
+	let shiftedTime: string = '';
+	let currentTime: string = '';
+	const shiftedFormatter = new Intl.DateTimeFormat([], {
+		timeZone: 'Europe/Moscow',
+		hour: 'numeric',
+		minute: 'numeric',
+		hourCycle: 'h23'
+	});
+	const currentFormatter = new Intl.DateTimeFormat([], {
+		hour: 'numeric',
+		minute: 'numeric',
+		hourCycle: 'h23'
+	});
+
+	const updateTime = () => {
+		shiftedTime = shiftedFormatter.format(new Date());
+		currentTime = currentFormatter.format(new Date());
+	};
+
+	setInterval(() => updateTime(), 1000 * 60);
+	updateTime();
 </script>
 
 {#if $show}
@@ -27,7 +50,12 @@
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
 				class="mt-5 text-2xl font-light text-dark dark:text-light md:text-4xl"
 			>
-				will write this later
+				there's not much to say! i live in eastern europe (utc+3), speak 2 languages and am
+				finishing high school this year.<br />
+				if you want, you can <UnderlinedLink text="dm me" link="/contact" />. i don't bite
+				<span class="text-xl"><i>(usually)</i></span>!<br />
+				it's currently <span class="text-5xl font-medium">{shiftedTime}</span> for me and
+				<span class="text-5xl font-medium">{currentTime}</span> for you.
 			</p>
 		</div>
 	</div>

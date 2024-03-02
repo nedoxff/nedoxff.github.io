@@ -2,10 +2,9 @@
 	import { Collapsible as CollapsiblePrimitive } from 'bits-ui';
 	import { slide } from 'svelte/transition';
 
-	export let skipTransition: boolean = false;
 	export let transition: CollapsiblePrimitive.ContentProps['transition'] = slide;
 	export let transitionConfig: CollapsiblePrimitive.ContentProps['transitionConfig'] = {
-		duration: skipTransition ? 0 : 300
+		duration: 300
 	};
 </script>
 
