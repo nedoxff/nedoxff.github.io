@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils.js';
+	import { cn } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	type $$Props = HTMLAttributes<HTMLDivElement>;
@@ -8,9 +8,6 @@
 	export { className as class };
 </script>
 
-<div
-	class={cn('flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2', className)}
-	{...$$restProps}
->
+<div class={cn('flex flex-col space-y-1.5 text-center sm:text-left', className)} {...$$restProps}>
 	<slot />
 </div>

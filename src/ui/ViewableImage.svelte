@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { showingOverlayedDialog } from '$lib';
-	import * as Dialog from '$lib/components/ui/dialog';
+	import * as Dialog from '$lib/components/ui/imageDialog';
 
 	export let src: string;
 

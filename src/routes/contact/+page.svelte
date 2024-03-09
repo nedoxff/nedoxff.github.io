@@ -38,7 +38,7 @@
 				transition:fly={{ y: 15, duration: MAIN_ANIMATION_DURATION, easing: quadInOut, delay: 250 }}
 				class="mt-5 text-2xl font-light text-dark dark:text-light md:text-4xl"
 			>
-				i exist on the following social medias:
+				i exist on the following platforms:
 			</p>
 			<div
 				class="mt-5 flex flex-col flex-wrap gap-1 md:flex-row"
@@ -67,6 +67,17 @@
 						><img class="invert" src="/social/github.svg" alt="github icon" /></span
 					>
 					<span class="ml-4 mr-4 text-4xl font-bold text-light dark:text-dark">nedoxff</span>
+				</a>
+				<a
+					href="mailto:nedoxff@proton.me"
+					class="inline-flex h-20 w-auto max-w-20 items-center overflow-hidden rounded-full bg-[#171516] transition-[max-width] duration-700 ease-in-out-quad hover:max-w-full dark:bg-[#E8EAE9]"
+				>
+					<span class="ml-4 flex h-16 min-w-12 max-w-12 items-center dark:invert"
+						><img class="invert" src="/social/mail.png" alt="github icon" /></span
+					>
+					<span class="ml-4 mr-4 text-4xl font-bold text-light dark:text-dark"
+						>nedoxff@proton.me</span
+					>
 				</a>
 			</div>
 			<p
