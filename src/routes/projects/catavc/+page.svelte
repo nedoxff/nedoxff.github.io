@@ -76,11 +76,11 @@
 			const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 			if (!isFirefox) {
 				alert(
-					"it seems like you're using a chromium-based browser. it probably supports HEVC playback, so you can use https://meow.camera instead of catavc, which is less stable and more buggy.\ni won't stop you though. if you believe this is a mistake or you want to continue anyway, just click OK.\nthis alert won't appear again."
+					"it seems like you're using a chromium-based browser. it probably supports HEVC playback, so you can use https://meow.camera instead of catavc, which is more stable and less laggy.\ni won't stop you though. if you believe this is a mistake or you want to continue anyway, please click OK.\nthis alert won't appear again."
 				);
 			}
 			alert(
-				'PLEASE READ:\ncatavc is a hobbyist project and is not guaranteed to run smoothly or well in general.\nall of the video conversion happens client-side, so PLEASE MONITOR YOUR CPU USAGE.\nffmpeg.wasm has been shown to leak memory sometimes, so PLEASE USE THIS WITH CAUTION.\nthis alert will not appear again.'
+				'PLEASE READ:\ncatavc is a hobbyist project and is not guaranteed to run smoothly or well in general.\nall of the video conversion happens client-side, so PLEASE MONITOR YOUR CPU USAGE.\nffmpeg.wasm has also been shown to leak memory, so PLEASE USE THIS WITH CAUTION.\nthis alert will not appear again.'
 			);
 			window.localStorage.setItem('catavcAlertsShown', 'true');
 		}
@@ -213,6 +213,20 @@
 												><a href="https://ffmpegwasm.netlify.app" class="underline">ffmpeg.wasm</a
 												></b
 											>: used for transcoding the HEVC stream
+											<br /><br />
+											my stuff:<br />
+											<b
+												><a href="https://github.com/nedoxff/nedoxff.github.io" class="underline"
+													>code for this website</a
+												></b
+											><br />
+											<b
+												><a href="https://github.com/nedoxff/transhls.js" class="underline"
+													>code for transhls.js</a
+												></b
+											><br />
+											<b><a href="https://nedoxff.github.io" class="underline">nedo's website</a></b
+											>
 										</Dialog.Description>
 									</Dialog.Header>
 								</Dialog.Content>
@@ -223,11 +237,14 @@
 								<div class="flex h-12 w-full items-center justify-center"><LoadingIndicator /></div>
 							{:then info}
 								<div class="mt-1">
+									<h1 class="text-lg">id: {currentHouseId}</h1>
 									<h1 class="text-lg">name: {info.name}</h1>
 									<h1 class="text-lg">currently a cat present: {info.catPresent ? 'yes' : 'no'}</h1>
 									<h1 class="text-lg">cats feed count (today): {info.todayFeedCount}</h1>
 									<h1 class="text-lg">cats showed up (today): {info.todayShowCount}</h1>
-									<h1 class="text-lg">device temperature: {info.deviceTemperatureCelsius}°C</h1>
+									<h1 class="text-lg">
+										device-measured temperature: {info.deviceTemperatureCelsius}°C
+									</h1>
 								</div>
 							{/await}
 						{:else}
@@ -236,7 +253,7 @@
 							</h1>
 						{/if}
 					</div>
-					<div class="ml-2 mt-2 flex-grow flex-col gap-3 rounded-3xl bg-black/15 p-4">
+					<div class="ml-2 mt-2 flex-col gap-3 rounded-3xl bg-black/15 p-4">
 						<h1 class="text-3xl font-light">options</h1>
 						<div class="mt-2 flex flex-row items-center gap-3">
 							<h1 class="text-lg">video quality</h1>

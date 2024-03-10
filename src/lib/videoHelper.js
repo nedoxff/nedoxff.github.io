@@ -47,7 +47,8 @@ export function setup(node) {
 		console.log('hls is now connected with video');
 	});
 	hls.on(Hls.Events.FRAG_BUFFERED, (e, d) => {
-		node.currentTime = d.frag.start;
+		if (node.currentTime > d.frag.start)
+			node.currentTime = d.frag.start;
 	});
 	hls.on(Hls.Events.LEVEL_SWITCHED, (e, d) => {
 		node.play();
