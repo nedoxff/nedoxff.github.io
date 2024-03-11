@@ -6,7 +6,7 @@
 <a href={link} target="_blank"
 	><u>{text}</u>
 	<img
-		class="-ml-2 inline-block align-baseline dark:invert"
+		class="-ml-2 inline-block align-bottom dark:invert"
 		src="/icons/link.svg"
 		alt="link icon"
 	/></a
