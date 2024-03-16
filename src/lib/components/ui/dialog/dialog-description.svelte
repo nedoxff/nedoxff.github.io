@@ -8,6 +8,9 @@
 	export { className as class };
 </script>
 
-<DialogPrimitive.Description class={cn('text-md text-white', className)} {...$$restProps}>
+<DialogPrimitive.Description
+	class={cn('text-md text-start text-white', className)}
+	{...$$restProps}
+>
 	<slot />
 </DialogPrimitive.Description>

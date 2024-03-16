@@ -64,8 +64,8 @@
 
 	const toggleFavorite = (house: CatHouse) => {
 		let currentFavorites = get(favorites);
-		if (currentFavorites.some((x) => x.catHouseId === house.catHouseId)) {
-			currentFavorites = currentFavorites.filter((x) => x.catHouseId !== house.catHouseId);
+		if (currentFavorites.some((x) => x.id === house.id)) {
+			currentFavorites = currentFavorites.filter((x) => x.id !== house.id);
 		} else currentFavorites.push(house);
 		favorites.set([...currentFavorites]);
 	};
@@ -105,21 +105,21 @@
 			{#each catHouses as house}
 				<button
 					class="relative flex flex-col rounded-xl bg-black/20 p-2 text-left {$currentHouseId ==
-					house.catHouseId
+					house.id
 						? 'border-2 border-white'
 						: ''}"
-					on:click={() => currentHouseId.set(house.catHouseId)}
+					on:click={() => currentHouseId.set(house.id)}
 				>
 					<button class="absolute right-3 top-3" on:click={() => toggleFavorite(house)}
 						><img
-							src={`/icons/star${$favorites.some((x) => x.catHouseId === house.catHouseId) ? '' : '_outline'}.svg`}
+							src={`/icons/star${$favorites.some((x) => x.id === house.id) ? '' : '_outline'}.svg`}
 							alt="bookmark button"
 						/></button
 					>
 					<h1 class="text-xl">
 						{house.name}<br />{house.englishName !== null ? `(${house.englishName})` : ''}
 					</h1>
-					<p class="text-lg text-white/65">ID: {house.catHouseId}</p>
+					<p class="text-lg text-white/65">ID: {house.id}</p>
 				</button>{/each}
 		</div>
 	{/await}

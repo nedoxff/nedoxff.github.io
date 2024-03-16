@@ -8,15 +8,24 @@
 	import { onMount } from 'svelte';
 	import { preloadImage } from '$lib';
 	import InformationBox from './components/InformationBox.svelte';
-	import { loadFfmpeg } from '$lib/videoHelper';
+	import { loadFfmpeg } from './videoHelper';
 	import VideoBox from './components/VideoBox.svelte';
 	import ErrorBox from './components/ErrorBox.svelte';
 	import OptionsBox from './components/OptionsBox.svelte';
 	import CatHousesBox from './components/CatHousesBox.svelte';
+	import { get } from 'svelte/store';
 
 	let hlsLoaded: boolean = false;
 
+	const CAMERA_PING_DELAY: number = 10000;
+
 	onMount(() => {
+		document.title = 'catavc';
+		// TODO: catavc doesn't support light mode (yet)
+		if (!document.documentElement.classList.contains('dark')) {
+			document.documentElement.classList.add('dark');
+		}
+
 		const query = new URLSearchParams(window.location.search);
 		if (query.has('id')) currentHouseId.set(query.get('id')!);
 		if (query.has('cameraPosition'))
@@ -24,6 +33,13 @@
 		if (query.has('audioEnabled')) enableAudio.set(query.get('audioEnabled')! == 'true');
 
 		currentHouseId.subscribe((_) => updateURL());
+		setInterval(async () => {
+			const id = get(currentHouseId);
+			const positionName = ['front', 'top', 'back'][get(cameraPosition)];
+			if (id !== undefined) {
+				await fetch(`https://api.meow.camera/catHouse/${id}/ping/${positionName}`);
+			}
+		}, CAMERA_PING_DELAY);
 	});
 
 	const load = async () => {
@@ -83,12 +99,12 @@
 				</div>
 			</div>
 		</div>
-	{:catch}
+	{:catch e}
 		<div
 			class="absolute left-0 top-0 flex h-[100vh] w-[100vw] flex-col items-center justify-center p-4"
 			transition:fly={{ y: 15, delay: 500 }}
 		>
-			<ErrorBox />
+			<ErrorBox message={e} />
 		</div>
 	{/await}
 {/if}

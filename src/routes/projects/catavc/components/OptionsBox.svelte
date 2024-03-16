@@ -3,7 +3,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Slider } from '$lib/components/ui/slider';
 	import { Checkbox } from '$lib/components/ui/checkbox';
-	import { hevcMode, hls } from '$lib/videoHelper';
+	import { hevcMode, hls } from '../videoHelper';
 	import { enableAudio, updateURL, videoQuality } from '../types';
 
 	const onVideoQualityChange = (quality: number[]) => {

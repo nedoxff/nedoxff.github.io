@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { setup, hls, hevcMode } from '$lib/videoHelper';
+	import { setup, hls, hevcMode } from '../videoHelper';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
-	import { cameraPosition, currentHouseId, enableAudio } from '../types';
+	import { cameraPosition, currentHouseId, enableAudio, updateURL } from '../types';
 
 	let statusImage: HTMLImageElement;
 	let videoContainer: HTMLVideoElement;
@@ -78,6 +78,7 @@
 		screenshowCanvasContext = screenshotCanvas.getContext('2d')!;
 
 		cameraPosition.subscribe((_) => updatePlayback());
+		cameraPosition.subscribe((_) => updateURL());
 		currentHouseId.subscribe((_) => updatePlayback());
 	});
 </script>
@@ -88,8 +89,8 @@
 		<video
 			class="absolute left-0 top-0 aspect-video w-full rounded-2xl"
 			crossorigin="anonymous"
+			playsinline
 			controls
-			autoplay
 		></video>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img
@@ -132,3 +133,13 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	video::-webkit-media-controls {
+		visibility: hidden;
+	}
+
+	video::-webkit-media-controls-enclosure {
+		visibility: visible;
+	}
+</style>

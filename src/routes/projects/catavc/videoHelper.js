@@ -7,7 +7,7 @@ export let hls;
 export let hevcMode;
 
 async function internalLoadFfmpeg(multicore) {
-	const baseUrl = `https://cdn.jsdelivr.net/npm/@ffmpeg/core${multicore ? '-mt' : ''}@0.12.6/dist/esm`;
+	const baseUrl = `https://cdn.jsdelivr.net/npm/@imput/ffwasm524-core-mt@latest/dist/esm`;
 
 	await ffmpeg.load({
 		coreURL: await toBlobURL(`${baseUrl}/ffmpeg-core.js`, 'text/javascript'),
@@ -24,8 +24,11 @@ export const loadFfmpeg = async () => {
 		console.log('hls is supported');
 		hls = new Hls({
 			liveDurationInfinity: true,
-			liveSyncDuration: 5,
-			maxFragLookUpTolerance: 0,
+			//maxFragLookUpTolerance: 0,
+			//liveMaxLatencyDurationCount: 5,
+			debug: true,
+			initialLiveManifestSize: 3,
+			lowLatencyMode: false,
 
 			transcoderPluginOptions: {
 				multicore: true,
@@ -51,12 +54,6 @@ export function setup(node) {
 	hls.on(Hls.Events.MEDIA_ATTACHED, () => {
 		console.log('hls is now connected with video');
 	});
-	hls.on(Hls.Events.FRAG_BUFFERED, (e, d) => {
-		if (node.currentTime > d.frag.start) node.currentTime = d.frag.start;
-	});
-	hls.on(Hls.Events.LEVEL_SWITCHED, (e, d) => {
-		node.play();
-	});
 	hls.on(Hls.Events.ERROR, (_, err) => {
 		if (err.details === 'bufferStalledError') {
 			console.log(
@@ -65,6 +62,11 @@ export function setup(node) {
 			);
 		}
 	});
+
+	node.onloadeddata = () => {
+		node.currentTime = node.buffered.start(0);
+		node.play();
+	};
 
 	hls.attachMedia(node);
 }

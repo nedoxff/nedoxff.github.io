@@ -101,6 +101,7 @@
 								</Drawer.Close>
 							</Drawer.Header>
 							<div class="mx-3 my-3 overflow-y-scroll" use:enableMasonry={imageMasonryProvider}>
+								<ViewableImage src="art-digital/unnickstylish.png" />
 								<ViewableImage src="art-digital/baffled.png" />
 								<ViewableImage src="art-digital/please.jpg" />
 								<ViewableImage src="art-digital/AGRETSUKAAAAAAAAA.png" />
