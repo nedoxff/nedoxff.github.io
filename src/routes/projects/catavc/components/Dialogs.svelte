@@ -45,7 +45,7 @@
 		<AlertDialog.Content>
 			<AlertDialog.Header>
 				<AlertDialog.Title>changelog (v{CATAVC_VERSION})</AlertDialog.Title>
-				<AlertDialog.Description>
+				<AlertDialog.Description class="max-h-[70vh] overflow-y-scroll">
 					this is a small hotfix that fixes things in the backend, partially to comply with
 					meow.camera API changes, and partially because i forgot to remove some code before
 					publishing the initial version of the project.<br />
