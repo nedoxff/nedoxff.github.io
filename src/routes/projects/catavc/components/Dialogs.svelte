@@ -4,7 +4,7 @@
 	import { writable } from 'svelte/store';
 	import UnderlinedLink from '../../../../ui/UnderlinedLink.svelte';
 
-	const CATAVC_VERSION: string = '1.1';
+	const CATAVC_VERSION: string = '.last';
 
 	let showBrowserDialog = writable(false);
 	let showInitialDialog = writable(false);
@@ -46,25 +46,16 @@
 			<AlertDialog.Header>
 				<AlertDialog.Title>changelog (v{CATAVC_VERSION})</AlertDialog.Title>
 				<AlertDialog.Description class="max-h-[70vh] overflow-y-scroll">
-					this is a small hotfix that fixes things in the backend, partially to comply with
-					meow.camera API changes, and partially because i forgot to remove some code before
-					publishing the initial version of the project.<br />
-					- cameras are now pinged every 10 seconds<br />
-					- light mode has been removed since it's currently broken<br />
-					- changing the camera position should now update the URL<br />
-					- <span class="font-mono">catHouseId</span> has been changed to
-					<span class="font-mono">id</span>, so the top/random lists should work fine
-					<br />
-					<b
-						>note: cameras may still be heavily buffered. i am still working on a solution, but it's
-						hurting my brain a bit so it might be delayed. also, meow.camera has also been working
-						on similar solutions to make the website more accessible, so this project may get
-						archived soon.</b
-					>
-					<br />
-					<br />
-					thank you for using catavc! this is my first project that got any kind of attention, and i'm
-					very glad to have entered this cute cat community.<br />
+					<UnderlinedLink link="https://meow.camera/viewer" text="meow.camera" /> got updated!!<br
+					/>
+					they added support for browsers without HEVC support (and even without WASM support, which
+					is essential for catavc!), so this project is essentially useless as of now. i'll be archiving
+					the code <UnderlinedLink link="https://github.com/nedoxff/catavc" text="on github" />, but
+					otherwise this project probably won't be updated nor supported in the future, sorry!<br />
+					if, for some reason, you still want to use catavc, you can, but i may remove it from the nedoxff.github.io
+					domain in a month or so.<br /><br />
+					thank you so much for using catavc! this was an incredibly useful experience and i was more
+					than happy to interact with this silly cat community!<br />
 					- nedo
 				</AlertDialog.Description>
 			</AlertDialog.Header>
