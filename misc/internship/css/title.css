@@ -1,0 +1,48 @@
+#title {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#slogan {
+    font-size: 5rem;
+    margin: 0;
+}
+
+#slogan-highlighted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #101010;
+    color: white;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    border-radius: 9999px;
+
+    transform: rotateZ(-2deg)
+}
+
+#slogan-developer {
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1)
+}
+
+#slogan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#slogan-sub {
+    font-weight: 300;
+    font-size: 2.5rem;
+    max-width: 50vw;
+}

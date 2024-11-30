@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/why-us.css">
+    <link rel="stylesheet" href="css/reviews.css">
+
+    <title>avacode</title>
+    <style>
+        :root {
+            font-family: Unbounded, sans-serif;
+            font-feature-settings: 'liga' 1, 'calt' 1;
+            /* fix for Chrome */
+        }
+
+        @supports (font-variation-settings: normal) {
+            :root {
+                font-family: Unbounded, sans-serif;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="name-container">
+            <img src="img/logo.svg" width="48" />
+            <a href="#title" style="text-decoration: none;"><h1 id="company-title">avacode</h1></a>
+        </div>
+        <div id="links-container">
+            <a href="#why-us">почему мы?</a>
+            <a href="#reviews">что о нас говорят</a>
+            <a href="#contact">контакты</a>
+        </div>
+        <button onclick="alert('мяууу :3')" id="personal-button">
+            в личный кабинет
+            <img src="img/arrow-forward.svg" width="16">
+        </button>
+    </nav>
+
+    <div id="section-container">
+        <div id="title">
+            <div id="slogan-container">
+                <p id="slogan">не просто<br /><span id="slogan-highlighted">&laquo;маркетплейс&raquo;</span></p>
+                <p id="slogan-sub"><b>avacode</b> &mdash; первая платформа для продажи гарнитуры, курсов и других полезностей для программистов.</p>
+            </div>
+            <img src="img/serious.svg" id="slogan-developer"/>
+        </div>
+
+        <div id="why-us">
+            <p id="why-us-title">почему мы?</p>
+            <div id="why-us-grid">
+                <div>
+                    <img src="img/thief.svg" style="width: 15%">
+                    <p class="reason-title">мы не разведём вас на деньги.</p>
+                    <p class="reason-text">avacode использует надёжные методы для оплаты предоставляемых продуктов.<br/>если вам не понравится приобретённый товар, мы вернём вам деньги. <b>всё настолько просто.</b></p>
+                </div>
+                <div>
+                    <img src="img/checkmark.svg" style="width: 15%">
+                    <p class="reason-title">большой ассортимент.</p>
+                    <p class="reason-text">мы предоставляем самые различные продукты и сервисы для программистов. всё, что вам может прийти в голову, скорее всего у нас есть.</p>
+                </div>
+                <div>
+                    <img src="img/people.svg" style="width: 15%">
+                    <p class="reason-title">большое сообщество.</p>
+                    <p class="reason-text">avacode &mdash; молодая платформа, однако у неё уже есть большое сообщество, к которому вы сможете обратиться по любому вопросу или предложению.</p>
+                </div>
+                <div>
+                    <img src="img/folder.svg" style="width: 15%">
+                    <p class="reason-title">всё в ваших руках.</p>
+                    <p class="reason-text">при покупке курса или программного обеспечения (ПО), вы становитесь легальным владельцем этого товара. мы у вас ничего не отберём.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="reviews">
+            <p id="reviews-title">что о нас говорят</p>
+        </div>
+    </div>
+</body>
+</html>
