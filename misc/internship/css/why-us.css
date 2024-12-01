@@ -35,6 +35,14 @@
     gap: 1rem;
     padding: 2rem;
     align-items: center;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+#why-us-grid div:hover {
+    transform: scale(102.5%)
 }
 
 .reason-title {

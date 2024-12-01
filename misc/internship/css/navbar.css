@@ -41,6 +41,8 @@
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    list-style: none;
+    padding-left: 0;
 }
 
 #links-container a {

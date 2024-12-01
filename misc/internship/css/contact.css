@@ -1,0 +1,63 @@
+#contact {
+    padding: 2rem;
+    width: 100dvw;
+    background-color: #101010;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 50vh;
+}
+
+#contact-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-info-container {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+#contact-company {
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#contact-company-memo {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#contact-image {
+    margin-right: 10rem;
+}
+
+.inline-container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-text {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.contact-text p {
+    margin: 0;
+}
+
+#credit {
+    color: white;
+    text-decoration: white 2px dotted underline;
+    font-weight: 300;
+}
