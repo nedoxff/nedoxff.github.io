@@ -1,5 +1,6 @@
 #contact {
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     width: 100dvw;
     background-color: #101010;
 
@@ -36,7 +37,7 @@
 }
 
 #contact-image {
-    margin-right: 10rem;
+    margin-right: 5rem;
 }
 
 .inline-container {
