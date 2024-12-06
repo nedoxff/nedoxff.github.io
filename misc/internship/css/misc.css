@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color: #101010;
+    color: var(--dark);
 }
 
 #section-container {
@@ -16,4 +16,8 @@ body {
 
 a {
     color: inherit;
+}
+
+p, h1 {
+    margin: 0;
 }

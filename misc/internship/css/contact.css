@@ -2,63 +2,56 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 100dvw;
-    background-color: #101010;
+    background-color: var(--dark);
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-height: 50vh;
-}
 
-#contact-list-container {
-    display: flex;
-    flex-direction: column;
-}
+    > div {
+        margin-left: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 2rem;
 
-#contact-info-container {
-    margin-left: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 2rem;
-}
+        #memo-container {
+            p {
+                color: var(--light);
+            }
 
-#contact-company {
-    margin: 0;
-    color: white;
-    font-size: 3rem;
-    font-weight: 600;
-}
+            p:first-of-type {
+                font-size: 3rem;
+                font-weight: 600;
+            }   
 
-#contact-company-memo {
-    margin: 0;
-    color: white;
-    font-size: 1.5rem;
-}
+            p:last-of-type {
+                font-size: 1.5rem;
+            }
+        }
 
-#contact-image {
-    margin-right: 5rem;
-}
+        #contact-list-container {
+            display: flex;
+            flex-direction: column;
 
-.inline-container {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-}
+            > div {
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+            }
 
-.contact-text {
-    color: white;
-    font-size: 2rem;
-    margin: 0;
-}
+            a {
+                color: var(--light);
+                font-size: 2rem;
+            }
 
-.contact-text p {
-    margin: 0;
-}
-
-#credit {
-    color: white;
-    text-decoration: white 2px dotted underline;
-    font-weight: 300;
+            a#credit {
+                text-decoration: var(--light) 2px dotted underline;
+                font-size: 1.25rem;
+                font-weight: 300;
+            }
+        }
+    }
 }

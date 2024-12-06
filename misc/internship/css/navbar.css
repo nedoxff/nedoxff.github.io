@@ -18,64 +18,67 @@
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     border: rgba(0, 0, 0, 0.5) 1px solid;
-    background-color: white;
+    background-color: var(--light);
     z-index: 10;
-}
 
-#name-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
+    > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
 
-#company-title {
-    margin: 0;
-    font-weight: 400;
-    font-size: 2rem;
-}
+        h1 {
+            font-weight: 400;
+            font-size: 2rem;
+        }
 
-#links-container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding-left: 0;
-}
+        a {
+            text-decoration: none;
+        }
+    }
 
-#links-container a {
-    font-size: 1.25rem;
-    color: grey;
-    text-decoration-style: dashed;
-}
+    > ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
 
-#links-container a:hover {
-    color: #101010;
-}
+        a {
+            font-size: 1.25rem;
+            color: grey;
+            text-decoration-style: dashed;
 
-#personal-button {
-    background: transparent;
-    border: 1px solid #101010;
-    border-radius: 9999px;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+            &:hover {
+                color: var(--dark)
+            }
+        }
+    }
 
-    font-family: "Unbounded";
-    cursor: pointer;
+    > button {
+        background: transparent;
+        border: 1px solid var(--dark);
+        border-radius: 9999px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    
+        font-family: "Unbounded";
+        cursor: pointer;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-}
+        &:hover {
+            color: var(--light);
+            background-color: var(--dark);
 
-#personal-button:hover {
-    color: white;
-    background-color: #101010;
-}
-
-#personal-button:hover img {
-    filter: invert()
+            img {
+                filter: invert()
+            }
+        }
+    }
 }
