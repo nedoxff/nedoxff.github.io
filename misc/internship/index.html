@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/why-us.css">
     <link rel="stylesheet" href="css/reviews.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/hamburger-menu.css">
 
     <link rel="icon" href="img/logo.svg">
     <title>avacode</title>
@@ -29,6 +31,32 @@
             }
         }
     </style>
+
+    <script>
+        const toggleHamburgerMenu = () => {
+            document.getElementById("hamburger-container").classList.toggle("opened");
+        }
+
+        const registerHamburgerLinkEvents = () => {
+            const links = document.getElementById("hamburger-menu-overlay").getElementsByTagName("a");
+            for(const link of links) {
+                link.addEventListener("click", () => toggleHamburgerMenu());
+            }
+        }
+
+        if (document.readyState === "complete") {
+            document.getElementById("hamburger-toggle-button").addEventListener("click", toggleHamburgerMenu);
+            registerHamburgerLinkEvents();
+        }
+        else {
+            document.onreadystatechange = () => {
+                if (document.readyState === "complete") {
+                    document.getElementById("hamburger-toggle-button").addEventListener("click", toggleHamburgerMenu);
+                    registerHamburgerLinkEvents();
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -45,10 +73,48 @@
             <li><a href="#contact">контакты</a></li>
         </ul>
         <button onclick="alert('мяууу :3')">
-            в личный кабинет
+            войти
             <img src="img/arrow-forward.svg" width="16">
         </button>
     </nav>
+
+    <div id="hamburger-container" class="opened">
+        <div id="hamburger-menu">
+            <div>
+                <button id="hamburger-toggle-button">
+                    <div id="hamburger-icon" />
+                </button>
+                <div>
+                    <img width="32" src="img/logo.svg" />
+                    <p>avacode</p>
+                </div>
+            </div>
+
+            <button onclick="alert('мяууу :3')">
+                войти
+                <img src="img/arrow-forward.svg" width="18">
+            </button>
+        </div>
+
+        <nav id="hamburger-menu-overlay">
+            <div>
+                <img src="img/arrow-forward.svg"/>
+                <a href="#title">главная</a>
+            </div>
+            <div>
+                <img src="img/arrow-forward.svg"/>
+                <a href="#why-us">почему мы?</a>
+            </div>
+            <div>
+                <img src="img/arrow-forward.svg"/>
+                <a href="#reviews">что о нас говорят</a>
+            </div>
+            <div>
+                <img src="img/arrow-forward.svg"/>
+                <a href="#contact">контакты</a>
+            </div>
+        </nav>
+    </div>
 
     <div id="section-container">
         <div id="title">
@@ -57,7 +123,7 @@
                 <p id="slogan-sub"><b>avacode</b> &mdash; первая платформа для продажи гарнитуры, курсов и других
                     полезностей для программистов.</p>
             </div>
-            <img src="img/serious.svg"/>
+            <img src="img/serious.svg" />
         </div>
 
         <div id="why-us">

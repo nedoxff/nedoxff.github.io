@@ -1,5 +1,5 @@
 #reviews {
-    height: 100dvh;
+    min-height: 100dvh;
     background-color: var(--light);
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     gap: 2rem;
 
     > p {
-        font-size: 3rem;
+        font-size: 5vmin;
         font-weight: 500;
         text-decoration: wavy underline var(--dark) 2px;
         color: var(--dark);
@@ -44,7 +44,7 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 2rem;
-        max-width: 60vw;
+        max-width: 75vw;
 
         .card:where(:nth-child(1), :nth-child(4)) {
             transform: rotate(-2deg)
@@ -62,7 +62,7 @@
     #reviews-sub {
         margin: 0;
         flex-grow: 1;
-        font-size: 2rem;
+        font-size: 4vmin;
         text-align: center;
         display: flex;
         align-items: center;
@@ -121,5 +121,50 @@
             color: grey;
             font-weight: 300;
         }   
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #reviews {
+        height: unset;
+        gap: 0rem;
+
+        > p {
+            font-size: 7vmin;
+        }
+
+        #news-container, #personal-reviews-container {
+            flex-direction: column;
+            gap: 1rem;
+
+            .card {
+                transform: rotate(0) !important;
+            }
+        }
+
+        #news-container {
+            margin-top: 2rem;
+        }
+
+        #personal-reviews-container {
+            max-width: unset;
+        }
+
+        #reviews-sub {
+            padding-top: 2rem;
+            padding-left: 1rem;
+            font-size: 4vmin;
+            padding-right: 1rem;
+        }
+    }
+    
+    .card {
+        max-width: 70vw;
+        div:nth-of-type(2) {    
+            p {
+                font-size: 3.25vmin;                
+                hyphens: auto;
+            }
+        }
     }
 }
