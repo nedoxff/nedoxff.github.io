@@ -39,7 +39,7 @@
 
         const registerHamburgerLinkEvents = () => {
             const links = document.getElementById("hamburger-menu-overlay").getElementsByTagName("a");
-            for(const link of links) {
+            for (const link of links) {
                 link.addEventListener("click", () => toggleHamburgerMenu());
             }
         }
@@ -72,7 +72,7 @@
             <li><a href="#reviews">что о нас говорят</a></li>
             <li><a href="#contact">контакты</a></li>
         </ul>
-        <button onclick="alert('мяууу :3')">
+        <button onclick="alert('бюджета моих нервных клеток не хватило на форму входа в личный кабинет. приносим мои извинения!')">
             войти
             <img src="img/arrow-forward.svg" width="16">
         </button>
@@ -98,19 +98,19 @@
 
         <nav id="hamburger-menu-overlay">
             <div>
-                <img src="img/arrow-forward.svg"/>
+                <img src="img/arrow-forward.svg" />
                 <a href="#title">главная</a>
             </div>
             <div>
-                <img src="img/arrow-forward.svg"/>
+                <img src="img/arrow-forward.svg" />
                 <a href="#why-us">почему мы?</a>
             </div>
             <div>
-                <img src="img/arrow-forward.svg"/>
+                <img src="img/arrow-forward.svg" />
                 <a href="#reviews">что о нас говорят</a>
             </div>
             <div>
-                <img src="img/arrow-forward.svg"/>
+                <img src="img/arrow-forward.svg" />
                 <a href="#contact">контакты</a>
             </div>
         </nav>
@@ -278,6 +278,25 @@
                         <p>design & code by @nedoxff</p>
                     </a>
                 </div>
+            </div>
+
+            <div id="contact-form-container">
+                <p>есть вопрос? задайте его!</p>
+                <form>
+                    <p>
+                        <label for="cf-name">имя:</label>
+                        <input required placeholder="Иван Иванов" type="text" id="cf-name" name="username"/>
+                    </p>
+                    <p>
+                        <label for="cf-mail">ваша почта:</label>
+                        <input required placeholder="ivanivanov@mail.ru" type="email" id="cf-mail" name="email"/>
+                    </p>
+                    <p>
+                        <label for="cf-message">сообщение:</label>
+                        <textarea required placeholder="кто такие формы пишет?! стыдобище!" id="cf-message" name="message"></textarea>
+                    </p>
+                    <button type="submit">отправить</button>
+                </form>
             </div>
         </div>
     </div>
