@@ -160,11 +160,18 @@
     
     .card {
         max-width: 70vw;
+
         div:nth-of-type(2) {    
             p {
                 font-size: 3.25vmin;                
                 hyphens: auto;
             }
+        }
+
+        div:nth-of-type(3) {
+            p {
+                font-size: 3vmin;
+            }   
         }
     }
 }
