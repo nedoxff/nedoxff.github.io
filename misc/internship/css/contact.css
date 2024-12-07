@@ -79,11 +79,12 @@
             flex-direction: column;
             gap: 1rem;
 
-            p {
+            div {
                 font-size: 2vmin;
                 display: flex;
                 flex-direction: row;
                 gap: 1rem;
+                color: var(--light);
             }
 
             input,
@@ -96,6 +97,7 @@
                 font-family: "Unbounded";
                 font-weight: 300;
                 flex-grow: 1;
+                width: 100%;
             }
 
             textarea {
@@ -106,35 +108,24 @@
                 border: 1px solid brown;
             }
 
-            p:last-of-type {
+            div:last-of-type {
                 flex-grow: 1;
             }
 
-            > button {
-                background: transparent;
-                border: 1px solid var(--light);
-                border-radius: 9999px;
-                padding: 1rem;
-
+            .common-button {
                 align-self: flex-end;
                 color: var(--light);
-
-                font-family: "Unbounded";
-                cursor: pointer;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.25rem;
-
-                transition-property: all;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-duration: 150ms;
+                border: 1px solid var(--light);
+                padding: 0.75rem;
 
                 &:hover {
                     color: var(--dark);
                     background-color: var(--light);
                 }
+            }
+
+            label {
+                text-wrap: nowrap;
             }
         }
     }
@@ -208,7 +199,7 @@
             }
 
             form {
-                p {
+                div {
                     font-size: 4vmin;
                     display: flex;
                     flex-direction: column;
