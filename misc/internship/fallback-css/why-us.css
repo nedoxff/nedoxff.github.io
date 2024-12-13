@@ -1,0 +1,78 @@
+#why-us {
+    height: 100dvh;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+#why-us > p {
+    font-size: 5vmin;
+    font-weight: 500;
+    text-decoration: wavy underline var(--light) 2px;
+    color: var(--light);
+}
+#why-us > div {
+    padding: 1rem;
+    margin: 1rem;
+    display: grid;
+    width: 75%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 20px;
+}
+#why-us > div div {
+    border: 1px var(--light) solid;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    color: var(--light);
+}
+#why-us > div div:hover {
+    transform: scale(102.5%);
+}
+#why-us > div div img {
+    width: 15%;
+}
+#why-us > div div p:first-of-type {
+    font-size: 3.25vmin;
+}
+#why-us > div div p:last-of-type {
+    font-size: 2.5vmin;
+    font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+    #why-us {
+        height: unset;
+        gap: 1rem;
+        padding-bottom: 2rem;
+   }
+    #why-us > p {
+        font-size: 7vmin;
+   }
+    #why-us > div {
+        grid-template-columns: 1fr;
+        margin: 0;
+        width: 90%;
+   }
+    #why-us > div div p:first-of-type {
+        font-size: 5vmin;
+        text-align: center;
+   }
+    #why-us > div div p:last-of-type {
+        font-size: 4vmin;
+        font-weight: 300;
+        hyphens: auto;
+   }
+    #why-us > div div img {
+        width: 25%;
+   }
+}

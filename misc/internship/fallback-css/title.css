@@ -1,0 +1,62 @@
+#title {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+#title div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#title div #slogan {
+    font-size: 7.25vmin;
+}
+#title div #slogan span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    color: var(--light);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    border-radius: 9999px;
+    transform: rotateZ(-2deg);
+}
+#title div #slogan-sub {
+    font-weight: 300;
+    font-size: 3.75vmin;
+    max-width: 50vw;
+}
+#title img {
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+@media screen and (max-width: 768px) {
+    #title {
+        height: unset;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 5rem;
+   }
+    #title div {
+        padding-left: 3rem;
+        padding-right: 3rem;
+   }
+    #title div #slogan {
+        font-size: 7vmin;
+   }
+    #title div #slogan-sub {
+        font-weight: 300;
+        font-size: 5vmin;
+        max-width: max-content;
+   }
+    #title img {
+        margin-top: -2rem;
+   }
+}

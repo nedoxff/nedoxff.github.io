@@ -1,9 +1,7 @@
 body {
     color: var(--dark);
 }
-
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -11,54 +9,44 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
 #section-container {
     display: flex;
     flex-direction: column;
 }
-
 a {
     color: inherit;
 }
-
-p,
-h1, h2 {
+p, h1, h2 {
     margin: 0;
 }
-
 .common-button {
     background: transparent;
     border: 1px solid var(--dark);
     border-radius: 9999px;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-
     font-family: "Unbounded";
     font-size: 1.75vmin;
-    /* font-size: 3.5vmin; */
+   /* font-size: 3.5vmin;
+    */
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.25rem;
-
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-
-    &:hover {
-        color: var(--light);
-        background-color: var(--dark);
-
-        img {
-            filter: invert()
-        }
-    }
 }
-
+.common-button:hover {
+    color: var(--light);
+    background-color: var(--dark);
+}
+.common-button:hover img {
+    filter: invert();
+}
 @media screen and (max-width: 768px) {
     .common-button {
         font-size: 3vmin;
-    }
+   }
 }

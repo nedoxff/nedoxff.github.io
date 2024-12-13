@@ -82,8 +82,8 @@
             div {
                 font-size: 2vmin;
                 display: flex;
-                flex-direction: row;
-                gap: 1rem;
+                flex-direction: column;
+                gap: 0.25rem;
                 color: var(--light);
             }
 
@@ -97,7 +97,7 @@
                 font-family: "Unbounded";
                 font-weight: 300;
                 flex-grow: 1;
-                width: 100%;
+                width: auto;
             }
 
             textarea {
