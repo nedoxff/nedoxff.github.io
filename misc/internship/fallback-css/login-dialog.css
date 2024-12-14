@@ -42,6 +42,7 @@
 }
 #login-dialog-container #login-image-container #login-image-content #image-content {
     max-height: 80dvh;
+    max-width: 90dvw;
     border-radius: 12px;
 }
 #login-dialog-container #login-image-container #login-image-content[class="success"] #login-image-error {
@@ -164,10 +165,11 @@
 }
 @media screen and (max-width: 768px) {
     #login-dialog-container #login-form-container form {
-        min-width: 85vw;
+        min-width: 85dvw;
    }
     #login-image-container #image-content {
         max-height: unset;
-        max-width: 80vw;
+        max-width: 80dvw;
+        max-height: 90dvh;
    }
 }

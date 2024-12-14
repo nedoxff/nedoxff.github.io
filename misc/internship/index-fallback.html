@@ -59,6 +59,11 @@
 
             URL.revokeObjectURL(gid("image-content").src);
             gid("image-content").src = "";
+
+            for (const control of gid("login-form-container").getElementsByTagName("input")) {
+                if (control.type === "checkbox") control.checked = false;
+                else control.value = "";
+            }
         }
 
         const closeImageModal = () => {
@@ -69,7 +74,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             gid("regular-login-button").addEventListener("click", () => {
                 const form = gid("login-form-container").getElementsByTagName("form")[0];
-                if(!form.checkValidity()) {
+                if (!form.checkValidity()) {
                     form.reportValidity();
                     return;
                 }
@@ -90,6 +95,20 @@
 
             gid("image-content").addEventListener('load', () => {
                 gid("login-image-content").classList.add("success");
+            });
+
+
+            gid("login-form-container").addEventListener("click", (event) => {
+                const form = gid("login-form-container").getElementsByTagName("form")[0];
+                if (!event.composedPath().includes(form)) {
+                    toggle("login-dialog-container");
+                }
+            });
+            gid("login-image-container").addEventListener("click", (event) => {
+                const form = gid("login-image-content");
+                if (!event.composedPath().includes(form)) {
+                    closeImageModal();
+                }
             });
         })
     </script>
